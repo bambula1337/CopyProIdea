@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @mouseenter="ActiveCard">
     <div class="PrcTxt">
       <p class="Popular" v-if="popular == true">Most popular</p>
       <p class="Days">{{days}} days</p>
@@ -35,25 +35,30 @@
 export default {
   name: "CPCardComponent",
   props: ["popular", "days", "price", "feature1", "feature2", "feature3", "feature4", "btn", "mback", "able1", "able2", "able3", "able4"],
+  methods: {
+    ActiveCard(){
+      this.classList.add("show");
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
   .card{
-    @apply flex flex-col bg-gray-50 py-8 rounded-3xl shadow-2xl mb-24;
-    width: 450px;
-    height: 964px;
+    @apply flex flex-col bg-gray-50 py-8 rounded-3xl shadow-2xl mb-24  duration-300 transition-all;
+    width: 400px;
+    height: 550px;
 
     & .PrcTxt{
 
       & .Popular{
-        @apply text-green-400 text-lg text-center;
+        @apply text-green-400 text-sm text-center;
       }
       & .Days{
-        @apply text-blue-900 text-center text-5xl mb-7 mt-2;
+        @apply text-blue-900 text-center text-3xl mb-7 mt-2;
       }
       & .Price{
-        @apply text-purple-400 text-center text-6xl;
+        @apply text-purple-400 text-center text-4xl;
       }
     }
     & .FtTxt{
@@ -63,25 +68,31 @@ export default {
         @apply flex justify-between;
 
         & img{
-          @apply w-6 h-5 mt-2;
+          @apply w-4 h-3 mt-2 mr-12;
         }
       }
       & .Features{
-        @apply text-gray-400 tracking-widest text-2xl mb-7;
+        @apply text-gray-400 tracking-widest text-sm ml-14 mb-5;
       }
     }
     hr{
-      @apply flex self-center mt-28 mb-24;
-      width: 308px;
+      @apply flex self-center mt-10 mb-12;
+      width: 200px;
     }
     & .SgUp{
-      @apply flex self-center mr-9 mt-24 flex-col;
+      @apply flex self-center flex-col duration-700 transition-all opacity-0;
       & .SgBtn{
-        @apply bg-purple-700 w-72 h-20 rounded-full text-center text-gray-50 text-2xl flex items-center justify-center;
+        @apply bg-purple-600 w-20 h-10 rounded-full text-center text-gray-50 text-sm flex items-center justify-center self-center mt-9 mb-3;
       }
       & p{
-        @apply text-blue-900 text-lg tracking-widest text-center mt-11;
+        @apply text-blue-900 text-sm tracking-widest text-center;
       }
     }
+  }
+  .card:hover .SgUp{
+    @apply opacity-100;
+  }
+   .card:hover{
+    height: 600px;
   }
 </style>

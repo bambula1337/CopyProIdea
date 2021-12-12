@@ -21,7 +21,7 @@ export default {
 .wrapper {
   & .wlcTxtBox {
     & .MnTxt {
-      @apply text-5xl uppercase text-center tracking-widest mb-5;
+      @apply text-5xl uppercase text-center tracking-widest mb-5 mt-20;
       color: rgba(59, 102, 141, 1);
     }
     & .bgTxtBox{

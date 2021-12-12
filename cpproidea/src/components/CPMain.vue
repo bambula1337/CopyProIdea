@@ -1,6 +1,5 @@
 <template>
   <section class="main">
-    <p>It's main component</p>
     <CPCardsMain/>
   </section>
 </template>
