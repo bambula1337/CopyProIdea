@@ -1,19 +1,23 @@
 <template>
-  <section class="test">
+  <section class="main">
     <p>It's main component</p>
+    <CPCardsMain/>
   </section>
 </template>
 
 <script>
+import CPCardsMain from "@/components/CPCards/CPCardsMain.vue";
+
 export default {
   name: "CPMain",
-  components: {},
+  components: {
+    CPCardsMain,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.test {
-  @apply flex justify-center items-center bg-gray-400;
-  height: 100vh;
+.main{
+  @apply flex flex-col justify-center;
 }
 </style>
