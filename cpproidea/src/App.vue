@@ -25,4 +25,10 @@ export default {
 
 <style lang="scss">
 @import "assets/style.scss";
+#app{
+  @apply relative;
+}
+.base-content {
+  @apply min-h-screen relative;
+}
 </style>

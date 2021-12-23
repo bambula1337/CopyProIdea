@@ -14,7 +14,8 @@
                      :able1="item.able1"
                      :able2="item.able2"
                      :able3="item.able3"
-                     :able4="item.able4"/>
+                     :able4="item.able4"
+                     :bgImg="item.bgImg"/>
   </div>
 </template>
 
@@ -45,6 +46,7 @@ export default {
           able2: true,
           able3: true,
           able4: true,
+          bgImg: "1.png",
         },
         {
           id: 2,
@@ -61,6 +63,7 @@ export default {
           able2: true,
           able3: true,
           able4: true,
+          bgImg: "2.png",
         },
          {
           id: 3,
@@ -77,6 +80,7 @@ export default {
           able2: true,
           able3: true,
           able4: true,
+          bgImg: "3.png",
         },
       ]
     }
@@ -86,6 +90,10 @@ export default {
 
 <style lang="scss" scoped>
   .allCards{
-    @apply flex justify-around mt-10;
+    @apply flex justify-around mt-10 bg-no-repeat px-12;
+    background-image: url("../../assets/img/cardsBG/main.png");
+    background-size: 225px;
+    justify-content: space-around;
+
   }
 </style>

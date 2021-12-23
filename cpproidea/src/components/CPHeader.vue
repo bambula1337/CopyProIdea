@@ -1,6 +1,5 @@
 <template>
   <header class="header">
-    <p>Its header component</p>
     <div class="navigation">
       <router-link to="/" class="nav-link-default" :active-class="'active'" exact>Home</router-link
       >
@@ -25,11 +24,13 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  @apply flex justify-center items-center bg-green-600 h-10 flex-col;
-
+  @apply flex justify-center items-center bg-transparent h-16 flex-col absolute top-0 left-0 z-10 w-full;
+  & p{
+    @apply text-purple-900 mb-3;
+  }
   & .navigation {
     & .nav-link-default {
-      @apply mx-2 text-purple-50;
+      @apply mx-2 self-center text-purple-50;
       &.active{
         @apply text-purple-900;
       }
