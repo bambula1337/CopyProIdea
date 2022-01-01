@@ -6,11 +6,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      sm: '640px',
+      sm: '320px',
       md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
+      lg: '1025px',
+      lgplus: '1280px',
+      xl: '1440px',
+      '2xl': '2560px',
     },
     colors: {
       transparent: 'transparent',
@@ -547,6 +548,9 @@ module.exports = {
       full: '100%',
       min: 'min-content',
       max: 'max-content',
+      designmd: '120%',
+      designlg: '90%',
+
     },
     objectPosition: {
       bottom: 'bottom',

@@ -1,6 +1,6 @@
 <template>
-  <div class="info_wrapper">
-    <div class="left-info">
+  <div class="info_wrapper md:mt-32">
+    <div class="left-info md:ml-12">
       <CPMInfoTopComponent
         v-for="(item, index) in top"
         :key="index"
@@ -18,7 +18,7 @@
       />
     </div>
     <div class="right-info">
-      <img src="@/assets/img/Design.png" alt="">
+      <img src="@/assets/img/Design.png" alt="" class="md:min-w-designmd md:mt-16 lg:min-w-designlg lg:mt-12">
     </div>
   </div>
 </template>
@@ -60,7 +60,7 @@ export default {
 .info_wrapper {
   @apply flex justify-around items-center min-h-screen;
   & .left-info {
-    @apply flex flex-col items-center w-1/2;
+    @apply flex flex-col items-center w-1/2 z-10;
   }
   & .right-info {
     @apply flex w-1/2 relative;

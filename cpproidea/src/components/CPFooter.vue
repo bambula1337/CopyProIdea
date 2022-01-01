@@ -3,13 +3,15 @@
     <div class="top">
       <div class="about">
         <p class="aboutmaintext">About us</p>
-        <p class="aboutsubtext">
-          When using the SKYBOX Services You may transmit, store and or share
-          certain data, information, files, etc. (altogether “Service Data”).
-          For the avoidance of doubt, You retain full ownership of Your Service
-          Data. SKYBOX doea that You or any other uss while using the Service.
-          SKYBOX agrees that these Terms do not grant
-        </p>
+        <div class="aboutsubtext">
+          <p>
+            When using the SKYBOX Services You may transmit, store and or share
+            certain data, information, files, etc. (altogether “Service Data”).
+            For the avoidance of doubt, You retain full ownership of Your
+            Service Data. SKYBOX doea that You or any other uss while using the
+            Service. SKYBOX agrees that these Terms do not grant
+          </p>
+        </div>
       </div>
       <div class="links">
         <p class="linksmaintext">Featured links</p>
@@ -44,7 +46,7 @@
         </div>
       </div>
     </div>
-    <hr>
+    <hr class="hr" />
     <div class="bottom">
       <p>Copyright © 2016 - 2021 - SkyBox - Online File Storage</p>
     </div>
@@ -60,62 +62,57 @@ export default {
 <style lang="scss" scoped>
 .footer {
   @apply flex justify-between items-center flex-col font-light text-sm tracking-wide bg-no-repeat;
-  background-image: url("../assets/img/footer/bg.png");
-  height: 100vh;
-  background-position: center, center;
-  & .top{
-    @apply flex text-gray-50 mt-72 justify-between;
+  background-image: url("../assets/img/footer/bgbig.png");
+  & .top {
+    @apply flex text-gray-50 mt-72 justify-around;
 
-    & .about{
-      @apply ml-28;
-      width: 23%;
+    & .about {
+      @apply ml-0;
+      width: 25%;
 
-      & .aboutmaintext{
+      & .aboutmaintext {
         @apply text-4xl font-normal tracking-wider mb-10;
       }
 
-      & .aboutsubtext{
-        line-height: 27px
+      & .aboutsubtext {
+        line-height: 27px;
       }
     }
 
-    & .links{
+    & .links {
       @apply flex flex-col;
-      width: 23%;
+      width: 20%;
 
-      & .linksmaintext{
+      & .linksmaintext {
         @apply text-4xl font-normal tracking-wider mb-10;
       }
 
-      & .link{
+      & .link {
         @apply mb-2 underline;
       }
     }
 
-    & .contact{
-      width: 23%;
-      & .contactmaintext{
+    & .contact {
+      width: 15%;
+      & .contactmaintext {
         @apply text-4xl font-normal tracking-wider mb-10;
       }
-      
-      & .contactsubtextbox{
 
-        & .contactsubtext{
+      & .contactsubtextbox {
+        & .contactsubtext {
           @apply mb-2;
         }
       }
-
     }
   }
-  & .bottom{
-    & p{
+  & .bottom {
+    & p {
       @apply my-6 text-gray-50 tracking-wider font-normal text-base;
     }
   }
-  & hr{
-    @apply self-center opacity-50 mt-24;
-    width: 1300px;
-    
+  .hr {
+    @apply self-center opacity-50 mt-14 mr-7;
+    width: 85%;
   }
 }
 </style>
