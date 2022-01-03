@@ -7,10 +7,13 @@ module.exports = {
   theme: {
     screens: {
       sm: '320px',
+      smlger: '480px',
+      smplus: '640px',
       md: '768px',
       lg: '1025px',
       lgplus: '1280px',
       xl: '1440px',
+      xlplus: '1536px',
       '2xl': '2560px',
     },
     colors: {
@@ -54,6 +57,7 @@ module.exports = {
       28: '7rem',
       32: '8rem',
       36: '9rem',
+      38: '9.5rem',
       40: '10rem',
       44: '11rem',
       48: '12rem',
@@ -93,6 +97,7 @@ module.exports = {
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
       'section-one-bg': 'url("/assets/img/BG.png")',
+
     },
     backgroundOpacity: (theme) => theme('opacity'),
     backgroundPosition: {
@@ -110,6 +115,8 @@ module.exports = {
       auto: 'auto',
       cover: 'cover',
       contain: 'contain',
+      none: '0px',
+      counter: '100px, 150px',
     },
     blur: {
       0: '0',

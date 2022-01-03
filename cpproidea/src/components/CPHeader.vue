@@ -1,15 +1,18 @@
 <template>
   <header class="header">
-    <p class="logo">Skybox</p>
+    <p class="logo sm: sm:text-4xl sm:font-normal">Skybox</p>
     <div class="navigation">
-      <div class="links">
+      <div class="links sm:hidden">
         <router-link to="/" class="nav-link-default" :active-class="'active'" exact>Home</router-link>
         <router-link to="/pricing" class="nav-link-default" :active-class="'active'">Pricing</router-link>
         <router-link to="/contact" class="nav-link-default" :active-class="'active'">Contact</router-link>
       </div>
-      <div class="login">
+      <div class="login sm:hidden">
         <router-link to="/login" class="login-link" :active-class="'active'" exact>Login</router-link>
         <router-link to="/signup" class="sign-up-link" :active-class="'active'"><button>Sign Up</button></router-link>
+      </div>
+      <div class="mobilemenu">
+        <img src="../assets/img/header/MENU.png" alt="">
       </div>
     </div>
   </header>
@@ -26,7 +29,7 @@ export default {
   @apply flex justify-around items-center bg-transparent h-16 absolute top-0 left-0 z-10 w-full mt-3;
 
   & .logo{
-    @apply text-3xl uppercase text-gray-50 font-light tracking-widest -mr-20;
+    @apply uppercase text-gray-50 tracking-widest;
   }
 
   & .navigation {

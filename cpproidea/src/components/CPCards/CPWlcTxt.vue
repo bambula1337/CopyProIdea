@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="wlcTxtBox">
       <p class="MnTxt">{{ maintxt }}</p>
-      <div class="bgTxtBox">
+      <div class="bgTxtBox sm:text-2xl">
         <p class="bgTxt">{{ bgtxt1 }}</p>
         <p class="bgTxt">{{ bgtxt2 }}</p>
       </div>
@@ -26,7 +26,7 @@ export default {
     }
     & .bgTxtBox{
       & .bgTxt{
-        @apply text-sm text-gray-500 text-center mb-2;
+        @apply text-gray-500 text-center mb-2;
       }
     }
   }

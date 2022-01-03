@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer sm:hidden">
     <div class="top">
       <div class="about">
         <p class="aboutmaintext">About us</p>
@@ -61,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  @apply flex justify-between items-center flex-col font-light text-sm tracking-wide bg-no-repeat;
+  @apply font-light text-sm tracking-wide bg-no-repeat;
   background-image: url("../assets/img/footer/bgbig.png");
   & .top {
     @apply flex text-gray-50 mt-72 justify-around;

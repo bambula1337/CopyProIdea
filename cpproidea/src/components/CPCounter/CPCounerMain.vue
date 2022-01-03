@@ -1,17 +1,17 @@
 <template>
-  <div class="allcount">
-    <div class="left">
-      <div class="img"><img :src="require(`../../assets/img/countUsersIcons/${icon}`)" alt=""></div>
-      <div class="lefttext">
-        <p class="count">{{count}}</p>
-        <p class="textcount">{{textcount}}</p>
+  <div class="allcount sm:bg-none md:bg-counter ">
+    <div class="left sm:flex-col sm:mb-10">
+      <div class="img mb-2"><img :src="require(`../../assets/img/countUsersIcons/${icon}`)" alt=""></div>
+      <div class="lefttext sm:flex sm:flex-col text-center">
+        <p class="count sm:text-5xl sm:tracking-wide">{{count}}</p>
+        <p class="textcount sm:text-2xl">{{textcount}}</p>
       </div>
     </div>
-    <div class="right">
-      <div class="img"><img :src="require(`../../assets/img/countUsersIcons/${icon2}`)"  alt=""></div>
-      <div class="righttext">
-        <p class="count2">{{count2}}</p>
-        <p class="textcount2">{{textcount2}}</p>
+    <div class="right sm:flex-col">
+      <div class="img mb-6"><img :src="require(`../../assets/img/countUsersIcons/${icon2}`)"  alt=""></div>
+      <div class="righttext sm:flex sm:flex-col sm:text-center">
+        <p class="count2 sm:text-5xl sm:tracking-wide">{{count2}}</p>
+        <p class="textcount2 sm:text-2xl sm:w-52">{{textcount2}}</p>
       </div>
     </div>
   </div>
@@ -26,11 +26,10 @@ export default {
 
 <style lang="scss" scoped>
   .allcount{
-    @apply flex flex-row justify-center items-center mb-12 bg-no-repeat h-60;
+    @apply mb-12 bg-no-repeat h-60;
     background-image: url("../../assets/img/countUsersIcons/left.png"),
                       url("../../assets/img/countUsersIcons/right.png");
     background-position: left center, right center;
-    background-size: 100px, 150px;
   
     & .left, .right{
       @apply flex justify-center items-center;
@@ -39,30 +38,29 @@ export default {
     }
 
     & .left{
-
       & img{
-        width: 70px;
+        width: 110px;
       }
     }
     & .right{
       & img{
-        width: 50px;
+        width: 90px;
       }
     }
     
     & .count, .count2{
-      @apply text-2xl font-medium;
+      @apply font-medium;
       color: rgba(66, 91, 140, 1);
     }
     & .textcount, .textcount2{
-      @apply text-sm mt-1;
+      @apply mt-1;
       color: rgba(113, 141, 194, 1);
     }
     & .righttext{
-      @apply ml-5 flex justify-start items-start flex-col;
+      @apply ml-5 flex justify-center items-center flex-col;
     }
     & .lefttext{
-      @apply ml-5 flex justify-center items-start flex-col mr-32;
+      @apply ml-5 flex justify-center items-center flex-col mr-4;
     } 
   }
 </style>

@@ -52,7 +52,8 @@ export default class Home extends Vue {}
 }
 .section-one-bg {
   background-image: url("../assets/img/BG.png");
-  background-size: 100% 100%;
-  @apply bg-no-repeat h-full;
+  background-size: 400% 70%;
+  background-position: 34.5% 0%;
+  @apply bg-no-repeat;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="info_wrapper md:mt-32">
+  <div class="info_wrapper md:mt-32 sm:mt-24 sm:flex-col-reverse sm:overflow-hidden">
     <div class="left-info md:ml-12">
       <CPMInfoTopComponent
         v-for="(item, index) in top"
@@ -8,7 +8,7 @@
         :welcomeTxt2="item.welcomeTxt2"
         :underWelcomeTxt="item.underWelcomeTxt"
       />
-      <hr />
+      <hr class="sm:hidden"/>
       <CPMInfoBottomComponent
         v-for="(item, index) in bottom"
         :key="index"
@@ -63,14 +63,16 @@ export default {
     @apply flex flex-col items-center w-1/2 z-10;
   }
   & .right-info {
-    @apply flex w-1/2 relative;
+    @apply flex w-1/2 relative justify-center;
     & img {
-      @apply absolute -top-72 -left-24;
-      width: 90%;
+      @apply -ml-38 relative mt-0;
+      right: -25%; 
+      width: 240%;
+      max-width: 450px;
     }
   }
   & hr {
-    @apply flex my-10 mr-9 ml-6;
+    @apply my-10 mr-9 ml-6;
     width: 430px;
     border: 1px solid rgba(59, 102, 141, 1);
     background-color: rgba(59, 102, 141, 1);

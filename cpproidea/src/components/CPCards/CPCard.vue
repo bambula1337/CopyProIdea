@@ -1,5 +1,5 @@
 <template>
-  <div class="card" @mouseenter="ActiveCard">
+  <div class="card sm:hidden" @mouseenter="ActiveCard">
     <img :src="require(`../../assets/img/cardsBG/${bgImg}`)" alt="" />
     <div class="PrcTxt">
       <p class="Popular" v-if="popular == true">Most popular</p>
@@ -61,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  @apply flex flex-col bg-gray-50 py-8 rounded-3xl shadow-2xl mb-24  duration-300 transition-all bg-no-repeat;
+  @apply bg-gray-50 py-8 rounded-3xl shadow-2xl mb-24  duration-300 transition-all bg-no-repeat;
   width: 350px;
   height: 550px;
 

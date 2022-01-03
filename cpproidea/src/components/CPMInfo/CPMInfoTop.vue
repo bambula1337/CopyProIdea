@@ -1,7 +1,7 @@
 <template>
-  <div class="top">
-    <p class="topText">{{welcomeTxt1}}<br>{{welcomeTxt2}}</p>
-    <p class="bottomText">{{underWelcomeTxt}}</p>
+  <div class="top sm:mt-6">
+    <p class="topText sm:text-center sm:text-6xl">{{welcomeTxt1}}<br>{{welcomeTxt2}}</p>
+    <p class="bottomText sm:text-center sm:-mt-1">{{underWelcomeTxt}}</p>
   </div>
 </template>
 
@@ -23,12 +23,12 @@ export default {
     }
 
     & .topText{
-      @apply text-6xl font-bold uppercase mb-3;
+      @apply font-bold uppercase mb-3;
 
       }
     & .bottomText{
-      @apply uppercase font-thin text-2xl mt-3;
-      letter-spacing: 19px;
+      @apply uppercase text-2xl;
+      letter-spacing: 8px;
     }
   }
 </style>
