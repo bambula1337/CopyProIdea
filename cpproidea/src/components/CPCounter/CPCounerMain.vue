@@ -3,15 +3,15 @@
     <div class="left sm:flex-col sm:mb-10">
       <div class="img mb-2"><img :src="require(`../../assets/img/countUsersIcons/${icon}`)" alt=""></div>
       <div class="lefttext sm:flex sm:flex-col text-center">
-        <p class="count sm:text-5xl sm:tracking-wide">{{count}}</p>
-        <p class="textcount sm:text-2xl">{{textcount}}</p>
+        <p class="count sm:text-4xl sm:tracking-wide">{{count}}</p>
+        <p class="textcount sm:text-xl">{{textcount}}</p>
       </div>
     </div>
     <div class="right sm:flex-col">
       <div class="img mb-6"><img :src="require(`../../assets/img/countUsersIcons/${icon2}`)"  alt=""></div>
       <div class="righttext sm:flex sm:flex-col sm:text-center">
-        <p class="count2 sm:text-5xl sm:tracking-wide">{{count2}}</p>
-        <p class="textcount2 sm:text-2xl sm:w-52">{{textcount2}}</p>
+        <p class="count2 sm:text-4xl sm:tracking-wide">{{count2}}</p>
+        <p class="textcount2 sm:text-xl sm:w-52">{{textcount2}}</p>
       </div>
     </div>
   </div>
@@ -39,12 +39,12 @@ export default {
 
     & .left{
       & img{
-        width: 110px;
+        width: 90px;
       }
     }
     & .right{
       & img{
-        width: 90px;
+        width: 70px;
       }
     }
     

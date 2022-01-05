@@ -65,9 +65,10 @@ export default {
   & .right-info {
     @apply flex w-1/2 relative justify-center;
     & img {
-      @apply -ml-38 relative mt-0;
+      @apply relative mt-0;
       right: -25%; 
       width: 240%;
+      margin-left: -9.5rem;
       max-width: 450px;
     }
   }
