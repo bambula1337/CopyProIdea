@@ -1,7 +1,7 @@
 <template>
-  <footer class="footer sm:hidden">
+  <footer class="footer">
     <div class="top">
-      <div class="about">
+      <div class="about sm:hidden">
         <p class="aboutmaintext">About us</p>
         <div class="aboutsubtext">
           <p>
@@ -13,7 +13,7 @@
           </p>
         </div>
       </div>
-      <div class="links">
+      <div class="links sm:hidden lg:flex lg:flex-col">
         <p class="linksmaintext">Featured links</p>
         <router-link to="/pricing" class="link" :active-class="'active'"
           >Pricing</router-link
@@ -35,8 +35,8 @@
         >
       </div>
       <div class="contact">
-        <p class="contactmaintext">Contact us</p>
-        <div class="contactsubtextbox">
+        <p class="contactmaintext sm:text-4xl smlger:text-5xl lg:text-4xl">Contact us</p>
+        <div class="contactsubtextbox sm:text-lg smlger:text-xl">
           <p class="contactsubtext">Our office:</p>
           <p class="contactsubtext">Digitalgoals LTD</p>
           <p class="contactsubtext">Lapathou, 6, Strovolos 2027,</p>
@@ -46,9 +46,9 @@
         </div>
       </div>
     </div>
-    <hr class="hr" />
+    <hr class="hr sm:mt-8 lg:mt-14" />
     <div class="bottom">
-      <p>Copyright © 2016 - 2021 - SkyBox - Online File Storage</p>
+      <p class="sm:text-xl sm:text-center smlger:text-2xl lg:text-base">Copyright © 2016 - 2021 <br class="lg:hidden"> SkyBox - Online File Storage</p>
     </div>
   </footer>
 </template>
@@ -80,7 +80,6 @@ export default {
     }
 
     & .links {
-      @apply flex flex-col;
       width: 20%;
 
       & .linksmaintext {
@@ -93,12 +92,13 @@ export default {
     }
 
     & .contact {
-      width: 15%;
+      @apply flex text-left flex-col;
       & .contactmaintext {
-        @apply text-4xl font-normal tracking-wider mb-10;
+        @apply font-normal tracking-wider mb-10 flex;
       }
 
       & .contactsubtextbox {
+        @apply flex flex-col;
         & .contactsubtext {
           @apply mb-2;
         }
@@ -107,12 +107,12 @@ export default {
   }
   & .bottom {
     & p {
-      @apply my-6 text-gray-50 tracking-wider font-normal text-base;
+      @apply my-6 text-gray-50 tracking-wider font-normal;
     }
   }
   .hr {
-    @apply self-center opacity-50 mt-14 mr-7;
-    width: 85%;
+    @apply self-center opacity-50 mr-7;
+    width: 100%;
   }
 }
 </style>

@@ -110,6 +110,7 @@ module.exports = {
       'right-bottom': 'right bottom',
       'right-top': 'right top',
       top: 'top',
+      homebgsm: '34.5% 0%',
     },
     backgroundSize: {
       auto: 'auto',
@@ -493,6 +494,8 @@ module.exports = {
       wide: '0.025em',
       wider: '0.05em',
       widest: '0.1em',
+      px6: '6px',
+      px10: '10px',
     },
     lineHeight: {
       none: '1',

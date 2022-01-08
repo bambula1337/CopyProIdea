@@ -1,17 +1,17 @@
 <template>
-  <div class="allcount sm:bg-none md:bg-counter ">
+  <div class="allcount sm:mb-12 sm:bg-none smlger:mb-32 md:bg-counter">
     <div class="left sm:flex-col sm:mb-10">
-      <div class="img mb-2"><img :src="require(`../../assets/img/countUsersIcons/${icon}`)" alt=""></div>
+      <div class="img mb-2 sm:w-24"><img :src="require(`../../assets/img/countUsersIcons/${icon}`)" alt=""></div>
       <div class="lefttext sm:flex sm:flex-col text-center">
-        <p class="count sm:text-4xl sm:tracking-wide">{{count}}</p>
-        <p class="textcount sm:text-xl">{{textcount}}</p>
+        <p class="count sm:text-4xl sm:tracking-wide smlger:text-5xl">{{count}}</p>
+        <p class="textcount sm:text-xl smlger:text-2xl">{{textcount}}</p>
       </div>
     </div>
     <div class="right sm:flex-col">
-      <div class="img mb-6"><img :src="require(`../../assets/img/countUsersIcons/${icon2}`)"  alt=""></div>
+      <div class="img mb-6 sm:w-20"><img :src="require(`../../assets/img/countUsersIcons/${icon2}`)"  alt=""></div>
       <div class="righttext sm:flex sm:flex-col sm:text-center">
-        <p class="count2 sm:text-4xl sm:tracking-wide">{{count2}}</p>
-        <p class="textcount2 sm:text-xl sm:w-52">{{textcount2}}</p>
+        <p class="count2 sm:text-4xl sm:tracking-wide smlger:text-5xl">{{count2}}</p>
+        <p class="textcount2 sm:text-xl sm:w-52 smlger:text-2xl">{{textcount2}}</p>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@ export default {
 
 <style lang="scss" scoped>
   .allcount{
-    @apply mb-12 bg-no-repeat h-60;
+    @apply bg-no-repeat h-60;
     background-image: url("../../assets/img/countUsersIcons/left.png"),
                       url("../../assets/img/countUsersIcons/right.png");
     background-position: left center, right center;
@@ -39,12 +39,11 @@ export default {
 
     & .left{
       & img{
-        width: 90px;
       }
     }
     & .right{
       & img{
-        width: 70px;
+        
       }
     }
     

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="section-one-bg">
+    <div class="section-one-bg sm:bg-homebgsm">
       <CPMInfo />
     </div>
     <CPCardsMain />
@@ -53,7 +53,6 @@ export default class Home extends Vue {}
 .section-one-bg {
   background-image: url("../assets/img/BG.png");
   background-size: 400% 70%;
-  background-position: 34.5% 0%;
   @apply bg-no-repeat;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <p class="logo sm: sm:text-4xl sm:font-normal">Skybox</p>
+    <p class="logo sm: sm:text-4xl sm:font-normal smlger:-ml-4">Skybox</p>
     <div class="navigation">
       <div class="links sm:hidden">
         <router-link to="/" class="nav-link-default" :active-class="'active'" exact>Home</router-link>
@@ -11,7 +11,7 @@
         <router-link to="/login" class="login-link" :active-class="'active'" exact>Login</router-link>
         <router-link to="/signup" class="sign-up-link" :active-class="'active'"><button>Sign Up</button></router-link>
       </div>
-      <div class="mobilemenu">
+      <div class="mobilemenu smlger:ml-24">
         <img src="../assets/img/header/MENU.png" alt="">
       </div>
     </div>

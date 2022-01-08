@@ -2,7 +2,7 @@
   <div class="card lg:flex flex-col " :class="{'sm:hidden': !popular}" @mouseenter="ActiveCard">
     <img :src="require(`../../assets/img/cardsBG/${bgImg}`)" alt="" class="sm:opacity-100 lg:opacity-50" />
     <div class="PrcTxt">
-      <p class="Popular sm:mt-7 sm:text-lg sm:-mb-6" v-if="popular == true">Most popular</p>
+      <p class="Popular sm:mt-7 sm:text-lg sm:-mb-6 smlger:mt-3" v-if="popular == true">Most popular</p>
       <p class="Days sm:text-4xl lg:text-3xl">{{ days }} days</p>
       <p class="Price sm:text-5xl sm:-mt-5">{{ price }}</p>
     </div>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="SgUp sm:opacity-100 lg:opacity-0">
-      <button class="SgBtn sm:text-xl sm:tracking-wider sm:w-36 sm:h-11 sm:mt-6 sm:mb-6 lg:tracking-normal lg:w-52 lg:h-12 lg:mt-5 lg:mb-3 lg:text-base" v-if="btn == true">Sing Up</button>
+      <button class="SgBtn sm:text-xl sm:tracking-wider sm:w-36 sm:h-11 sm:mt-4 sm:mb-6 smlger:mb-4 smlger:mt-6 lg:tracking-normal lg:w-52 lg:h-12 lg:mt-5 lg:mb-3 lg:text-base" v-if="btn == true">Sing Up</button>
       <p>{{ mback }}</p>
     </div>
   </div>

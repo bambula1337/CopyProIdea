@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <div class="wlcTxtBox">
-      <p class="MnTxt">{{ maintxt }}</p>
-      <div class="bgTxtBox sm:text-2xl">
+      <p class="MnTxt sm:text-5xl smlger:text-6xl smlger:font-medium">{{ maintxt }}</p>
+      <div class="bgTxtBox sm:text-2xl smlger:text-2xl">
         <p class="bgTxt">{{ bgtxt1 }}</p>
         <p class="bgTxt">{{ bgtxt2 }}</p>
       </div>
@@ -21,7 +21,7 @@ export default {
 .wrapper {
   & .wlcTxtBox {
     & .MnTxt {
-      @apply text-5xl uppercase text-center tracking-widest mb-5 mt-20;
+      @apply  uppercase text-center tracking-widest mb-5 mt-20;
       color: rgba(59, 102, 141, 1);
     }
     & .bgTxtBox{

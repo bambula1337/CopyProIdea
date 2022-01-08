@@ -1,5 +1,5 @@
 <template>
-  <div class="bottom sm:self-end">
+  <div class="bottom sm:self-end sm:-ml-12 smlger:-ml-7 smlger:self-center">
     <div class="topcontent">
       <p class="top sm:text-left sm:font-medium sm:mt-6 sm:ml-1 tracking-tight">
         {{ topText }}
@@ -8,7 +8,7 @@
         <p class="info">{{ mainText }}</p>
       </div>
     </div>
-    <button class="tryNow">{{ btnText }}</button>
+    <button class="tryNow text-xl">{{ btnText }}</button>
   </div>
 </template>
 
@@ -21,14 +21,15 @@ export default {
 
 <style lang="scss" scoped>
 .bottom {
-  @apply flex flex-col -ml-12;
+  @apply flex flex-col;
+  max-width: 280px;
 
   & .topcontent{
     @apply -ml-2.5;
   }
 
   & .top {
-    @apply uppercase text-2xl mb-2;
+    @apply uppercase text-2xl mb-2 -ml-0.5;
     color: rgba(59, 102, 141, 1);
     width: 130%;
   }
