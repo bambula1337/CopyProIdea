@@ -1,7 +1,7 @@
 <template>
-  <div class="top sm:mt-6">
-    <p class="topText sm:text-center sm:text-6xl smlger:text-7xl">{{welcomeTxt1}}<br>{{welcomeTxt2}}</p>
-    <p class="bottomText sm:ml-1.5 sm:text-center sm:-mt-1 sm:tracking-px6 smlger:tracking-px10 smlger:ml-2">{{underWelcomeTxt}}</p>
+  <div class="top">
+    <p class="topText">{{welcomeTxt1}}<br>{{welcomeTxt2}}</p>
+    <p class="bottomText">{{underWelcomeTxt}}</p>
   </div>
 </template>
 
@@ -16,6 +16,7 @@ export default {
   .top{
 
     @apply flex flex-col;
+    @apply sm:mt-6;
 
 
     & .topText, .bottomText{
@@ -24,10 +25,12 @@ export default {
 
     & .topText{
       @apply font-bold uppercase mb-3;
+      @apply sm:text-center sm:text-6xl smlger:text-7xl smplus:text-7.5xl smplus:tracking-widest;
 
       }
     & .bottomText{
       @apply uppercase text-2xl;
+      @apply sm:ml-1.5 sm:text-center sm:-mt-1 sm:tracking-px6 smlger:tracking-px10 smlger:ml-2 smplus:tracking-rem101;
     }
   }
 </style>

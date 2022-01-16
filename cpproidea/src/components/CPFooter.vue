@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="top">
-      <div class="about sm:hidden">
+      <div class="about">
         <p class="aboutmaintext">About us</p>
         <div class="aboutsubtext">
           <p>
@@ -13,7 +13,7 @@
           </p>
         </div>
       </div>
-      <div class="links sm:hidden lg:flex lg:flex-col">
+      <div class="links">
         <p class="linksmaintext">Featured links</p>
         <router-link to="/pricing" class="link" :active-class="'active'"
           >Pricing</router-link
@@ -35,8 +35,8 @@
         >
       </div>
       <div class="contact">
-        <p class="contactmaintext sm:text-4xl smlger:text-5xl lg:text-4xl">Contact us</p>
-        <div class="contactsubtextbox sm:text-lg smlger:text-xl">
+        <p class="contactmaintext">Contact us</p>
+        <div class="contactsubtextbox">
           <p class="contactsubtext">Our office:</p>
           <p class="contactsubtext">Digitalgoals LTD</p>
           <p class="contactsubtext">Lapathou, 6, Strovolos 2027,</p>
@@ -46,9 +46,9 @@
         </div>
       </div>
     </div>
-    <hr class="hr sm:mt-8 lg:mt-14" />
+    <hr class="hr" />
     <div class="bottom">
-      <p class="sm:text-xl sm:text-center smlger:text-2xl lg:text-base">Copyright © 2016 - 2021 <br class="lg:hidden"> SkyBox - Online File Storage</p>
+      <p class="">Copyright © 2016 - 2021 <br class="md:hidden"> SkyBox - Online File Storage</p>
     </div>
   </footer>
 </template>
@@ -62,32 +62,41 @@ export default {
 <style lang="scss" scoped>
 .footer {
   @apply font-light text-sm tracking-wide bg-no-repeat;
+  @apply md:mt-10;
   background-image: url("../assets/img/footer/bgbig.png");
   & .top {
     @apply flex text-gray-50 mt-72 justify-around;
 
     & .about {
-      @apply ml-0;
-      width: 25%;
+      @apply ml-0 w-84;
+      @apply sm:hidden;
+      @apply lg:flex lg:flex-col;
 
       & .aboutmaintext {
         @apply text-4xl font-normal tracking-wider mb-10;
       }
 
       & .aboutsubtext {
-        line-height: 27px;
+        @apply text-lg;
+        line-height: 25.6px;
       }
     }
 
     & .links {
       width: 20%;
+      @apply sm:hidden;
+      @apply md:flex md:flex-col md:w-96 md:-mr-28;
 
       & .linksmaintext {
         @apply text-4xl font-normal tracking-wider mb-10;
+        @apply md:text-5xl; 
+        @apply lg:text-4xl;
       }
 
       & .link {
         @apply mb-2 underline;
+        @apply md:text-xl;
+        @apply lg:text-lg;
       }
     }
 
@@ -95,10 +104,14 @@ export default {
       @apply flex text-left flex-col;
       & .contactmaintext {
         @apply font-normal tracking-wider mb-10 flex;
+        @apply sm:text-4xl smlger:text-5xl;
+        @apply lg:text-4xl;
       }
 
       & .contactsubtextbox {
         @apply flex flex-col;
+        @apply sm:text-lg smlger:text-xl;
+        @apply lg:text-lg;
         & .contactsubtext {
           @apply mb-2;
         }
@@ -108,10 +121,12 @@ export default {
   & .bottom {
     & p {
       @apply my-6 text-gray-50 tracking-wider font-normal;
+      @apply sm:text-xl sm:text-center smlger:text-2xl lg:text-base;
     }
   }
   .hr {
     @apply self-center opacity-50 mr-7;
+    @apply sm:mt-8 lg:mt-14;
     width: 100%;
   }
 }

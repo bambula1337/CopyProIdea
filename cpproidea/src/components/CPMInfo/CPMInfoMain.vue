@@ -8,7 +8,7 @@
         :welcomeTxt2="item.welcomeTxt2"
         :underWelcomeTxt="item.underWelcomeTxt"
       />
-      <hr class="sm:hidden smlger:flex"/>
+      <hr class=""/>
       <CPMInfoBottomComponent
         v-for="(item, index) in bottom"
         :key="index"
@@ -18,7 +18,7 @@
       />
     </div>
     <div class="right-info">
-      <img src="@/assets/img/Design.png" alt="" class=" sm:-right-1/4 smlger:-right-1/3 md:min-w-designmd md:mt-16 lg:min-w-designlg lg:mt-12">
+      <img src="@/assets/img/Design.png" alt="" class=" ">
     </div>
   </div>
 </template>
@@ -65,15 +65,17 @@ export default {
   & .right-info {
     @apply flex w-1/2 relative justify-center;
     & img {
-      @apply relative mt-0;
+      @apply relative mt-0 max-w-md;
+      @apply sm:-right-1/4 smlger:-right-1/3 smplus:max-w-xl smplus:-right-1/4;
+      @apply md:max-w-2xl;
+      @apply lg:min-w-designlg lg:mt-12;
       width: 240%;
       margin-left: -9.5rem;
-      max-width: 450px;
     }
   }
   & hr {
-    @apply mt-5 ;
-    width: 325px;
+    @apply mt-5 w-80;
+    @apply sm:hidden smlger:flex smplus:w-100 smplus:mr-1;
     border: 1px solid rgba(59, 102, 141, 1);
     background-color: rgba(59, 102, 141, 1);
   }
