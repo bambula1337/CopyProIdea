@@ -69,6 +69,7 @@ module.exports = {
       80: '20rem',
       84: '21rem',
       96: '24rem',
+      98: '25rem',
       100: '26rem',
     },
     animation: {
@@ -120,6 +121,7 @@ module.exports = {
       contain: 'contain',
       none: '0px',
       counter: '100px, 150px',
+      full: '100%',
     },
     blur: {
       0: '0',
@@ -497,6 +499,7 @@ module.exports = {
       wide: '0.025em',
       wider: '0.05em',
       widest: '0.1em',
+      widestplus: '19px',
       px6: '6px',
       px10: '10px',
       rem101: '1.1rem',

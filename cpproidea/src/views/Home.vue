@@ -55,6 +55,6 @@ export default class Home extends Vue {}
   background-size: 400% 70%;
   @apply bg-no-repeat;
   @apply sm:bg-homebgsm;
-  @apply lg:bg-top lg:bg-contain;
+  @apply lg:bg-top lg:bg-full;
 }
 </style>

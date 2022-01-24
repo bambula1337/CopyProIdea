@@ -60,8 +60,8 @@ export default {
 .info_wrapper {
   @apply flex justify-around items-center min-h-screen;
   @apply sm:mt-24 sm:flex-col-reverse sm:overflow-hidden;
-  @apply lg:flex-row;
   @apply md:mt-32;
+  @apply lg:flex-row;
   & .left-info {
     @apply flex flex-col items-center w-1/2 z-10;
     @apply md:ml-12;
@@ -69,19 +69,20 @@ export default {
   & .right-info {
     @apply flex w-1/2 relative justify-center;
     & img {
+      width: 240%;
+      margin-left: -9.5rem;
       @apply relative mt-0 max-w-md;
       @apply sm:-right-1/4 smlger:-right-1/3 smplus:max-w-xl smplus:-right-1/4;
       @apply md:max-w-2xl;
-      @apply lg:min-w-designlg lg:mt-12;
-      width: 240%;
-      margin-left: -9.5rem;
+      @apply lg:min-w-designlg lg:mt-12 lg:right-0 lg:top-5 lg:-left-10;
     }
   }
   & hr {
-    @apply mt-5 w-80;
-    @apply sm:hidden smlger:flex smplus:w-100 smplus:mr-1;
     border: 1px solid rgba(59, 102, 141, 1);
     background-color: rgba(59, 102, 141, 1);
+    @apply mt-5 w-80;
+    @apply sm:hidden smlger:flex smplus:w-100 smplus:mr-1;
+    @apply lg:mt-9 mb-5;
   }
 }
 </style>

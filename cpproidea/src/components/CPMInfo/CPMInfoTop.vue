@@ -17,6 +17,7 @@ export default {
 
     @apply flex flex-col;
     @apply sm:mt-6;
+    @apply lg:ml-5;
 
 
     & .topText, .bottomText{
@@ -32,7 +33,7 @@ export default {
     & .bottomText{
       @apply uppercase text-2xl;
       @apply sm:ml-1.5 sm:text-center sm:-mt-1 sm:tracking-px6 smlger:tracking-px10 smlger:ml-2 smplus:tracking-rem101;
-      @apply lg:font-light;
+      @apply lg:font-light lg:mt-3 tracking-widestplus;
     }
   }
 </style>
