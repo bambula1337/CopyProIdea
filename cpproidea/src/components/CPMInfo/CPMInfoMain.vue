@@ -1,6 +1,6 @@
 <template>
-  <div class="info_wrapper md:mt-32 sm:mt-24 sm:flex-col-reverse sm:overflow-hidden">
-    <div class="left-info md:ml-12">
+  <div class="info_wrapper">
+    <div class="left-info">
       <CPMInfoTopComponent
         v-for="(item, index) in top"
         :key="index"
@@ -59,8 +59,12 @@ export default {
 <style lang="scss" scoped>
 .info_wrapper {
   @apply flex justify-around items-center min-h-screen;
+  @apply sm:mt-24 sm:flex-col-reverse sm:overflow-hidden;
+  @apply lg:flex-row;
+  @apply md:mt-32;
   & .left-info {
     @apply flex flex-col items-center w-1/2 z-10;
+    @apply md:ml-12;
   }
   & .right-info {
     @apply flex w-1/2 relative justify-center;

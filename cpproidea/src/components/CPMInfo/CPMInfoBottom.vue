@@ -32,15 +32,17 @@ export default {
   & .top {
     @apply uppercase text-2xl mb-2 -ml-0.5 tracking-tight w-1.3;
     @apply sm:text-left sm:font-medium sm:mt-6 smplus:text-3xl smplus:-ml-12 smplus:w-3/2;
+    @apply lg:text-2xl lg:font-normal;
     color: rgba(59, 102, 141, 1);
   }
 
   & .infoWrapper {
     & .info {
-      @apply font-normal mb-7 text-lg;
-      @apply smplus:text-xl smplus:-ml-12 ;
       color: rgba(59, 102, 141, 1);
       width: 120%;
+      @apply font-normal mb-7 text-lg;
+      @apply smplus:text-xl smplus:-ml-12;
+      @apply lg:text-lg lg:font-light lg:w-3/2;
     }
   }
 

@@ -26,11 +26,13 @@ export default {
     & .topText{
       @apply font-bold uppercase mb-3;
       @apply sm:text-center sm:text-6xl smlger:text-7xl smplus:text-7.5xl smplus:tracking-widest;
+      @apply lg:text-6xl lg:text-left lg:tracking-normal lg:ml-2;
 
       }
     & .bottomText{
       @apply uppercase text-2xl;
       @apply sm:ml-1.5 sm:text-center sm:-mt-1 sm:tracking-px6 smlger:tracking-px10 smlger:ml-2 smplus:tracking-rem101;
+      @apply lg:font-light;
     }
   }
 </style>
