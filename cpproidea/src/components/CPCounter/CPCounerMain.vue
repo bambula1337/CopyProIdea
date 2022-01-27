@@ -1,14 +1,14 @@
 <template>
   <div class="allcount">
     <div class="left">
-      <div class="img mb-2 sm:w-24 lg:w-20"><img :src="require(`../../assets/img/countUsersIcons/${icon}`)" alt=""></div>
+      <div class="img"><img :src="require(`../../assets/img/countUsersIcons/${icon}`)" alt=""></div>
       <div class="lefttext">
         <p class="count">{{count}}</p>
         <p class="textcount">{{textcount}}</p>
       </div>
     </div>
     <div class="right">
-      <div class="img mb-6 sm:w-20 lg:w-16"><img :src="require(`../../assets/img/countUsersIcons/${icon2}`)"  alt=""></div>
+      <div class="img"><img :src="require(`../../assets/img/countUsersIcons/${icon2}`)"  alt=""></div>
       <div class="righttext">
         <p class="count2">{{count2}}</p>
         <p class="textcount2 sm:w-52 lgplus:w-96">{{textcount2}}</p>
@@ -46,6 +46,9 @@ export default {
       @apply sm:flex-col sm:mb-10;
       @apply lg:flex-row lg:mr-10 ml-5 lgplus:ml-16 lgplus:mr-16;
       & img{
+        @apply mb-2;
+        @apply sm:w-24;
+        @apply lg:w-20;
       }
     }
     & .right{
@@ -53,20 +56,22 @@ export default {
       @apply lg:flex-row lg:-mt-3;
       @apply lgplus:-mt-3;
       & img{
-        
+        @apply mb-6;
+        @apply sm:w-20;
+        @apply lg:w-16;
       }
     }
     
     & .count, .count2{
       @apply font-medium;
       @apply sm:text-4xl sm:tracking-wide smlger:text-5xl;
-      @apply lg:text-3xl lg:self-start;
+      @apply lg:text-2xl lg:self-start;
       color: rgba(66, 91, 140, 1);
     }
     & .textcount, .textcount2{
       @apply mt-1;
       @apply sm:text-xl smlger:text-2xl;
-      @apply lg:text-xl lg:text-left;
+      @apply lg:text-sm lg:text-left;
       color: rgba(113, 141, 194, 1);
     }
     & .righttext{

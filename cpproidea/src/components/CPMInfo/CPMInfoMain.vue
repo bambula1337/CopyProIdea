@@ -82,7 +82,7 @@ export default {
     background-color: rgba(59, 102, 141, 1);
     @apply mt-5 w-80;
     @apply sm:hidden smlger:flex smplus:w-100 smplus:mr-1;
-    @apply lg:mt-9 mb-5;
+    @apply lg:mt-9 lg:mb-5 lg:ml-4 lg:w-104;
   }
 }
 </style>
