@@ -70,7 +70,7 @@ export default {
     & .about {
       @apply ml-0 w-84;
       @apply sm:hidden;
-      @apply lg:flex lg:flex-col;
+      @apply lg:flex lg:flex-col lg:w-1/4;
 
       & .aboutmaintext {
         @apply text-4xl font-normal tracking-wider mb-10;
@@ -78,6 +78,7 @@ export default {
 
       & .aboutsubtext {
         @apply text-lg;
+        @apply lg:text-sm lg:w-96;
         line-height: 25.6px;
       }
     }
@@ -86,6 +87,7 @@ export default {
       width: 20%;
       @apply sm:hidden;
       @apply md:flex md:flex-col md:w-96 md:-mr-28;
+      @apply lg:w-1/5 lg:mx-10;
 
       & .linksmaintext {
         @apply text-4xl font-normal tracking-wider mb-10;
@@ -96,12 +98,13 @@ export default {
       & .link {
         @apply mb-2 underline;
         @apply md:text-xl;
-        @apply lg:text-lg;
+        @apply lg:text-sm;
       }
     }
 
     & .contact {
       @apply flex text-left flex-col;
+      @apply lg:w-1/6;
       & .contactmaintext {
         @apply font-normal tracking-wider mb-10 flex;
         @apply sm:text-4xl smlger:text-5xl;
@@ -111,7 +114,7 @@ export default {
       & .contactsubtextbox {
         @apply flex flex-col;
         @apply sm:text-lg smlger:text-xl;
-        @apply lg:text-lg;
+        @apply lg:text-sm;
         & .contactsubtext {
           @apply mb-2;
         }
