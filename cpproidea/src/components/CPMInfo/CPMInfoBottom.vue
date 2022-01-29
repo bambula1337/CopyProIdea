@@ -21,9 +21,9 @@ export default {
 
 <style lang="scss" scoped>
 .bottom {
+  margin-left: 10%;
   @apply flex flex-col;
-  @apply sm:self-end sm:-ml-12 sm:-mr-3 smlger:-ml-7 smlger:self-center smlger:-mr-3 smplus:-mr-0;
-  max-width: 280px;
+  @apply sm:max-w-xsminus smlger:-ml-7 smlger:self-center smlger:-mr-3 smplus:-mr-0;
 
   & .topcontent{
     @apply -ml-2.5;
@@ -31,7 +31,7 @@ export default {
 
   & .top {
     @apply uppercase text-2xl mb-2 -ml-0.5 tracking-tight w-1.3;
-    @apply sm:text-left sm:font-medium sm:mt-6 smplus:text-3xl smplus:-ml-12 smplus:w-3/2;
+    @apply sm:text-left sm:w-80 sm:font-medium sm:mt-6 smlger:max-w-sm smlger:w-96 smplus:text-3xl smplus:-ml-12 smplus:min-w-3/2;
     @apply lg:text-2xl lg:font-normal lg:tracking-wide;
     color: rgba(59, 102, 141, 1);
   }
@@ -40,8 +40,9 @@ export default {
     & .info {
       color: rgba(59, 102, 141, 1);
       width: 120%;
+      max-width: 300px;
       @apply font-normal mb-7 text-lg;
-      @apply smplus:text-xl smplus:-ml-12;
+      @apply smlger:max-w-xs smplus:text-xl smplus:-ml-12 smplus:max-w-4xl;
       @apply lg:text-lg lg:font-light w-98;
     }
   }

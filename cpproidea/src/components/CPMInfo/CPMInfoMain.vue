@@ -74,7 +74,7 @@ export default {
       @apply relative mt-0 max-w-md;
       @apply sm:-right-1/4 smlger:-right-1/3 smplus:max-w-xl smplus:-right-1/4;
       @apply md:max-w-2xl;
-      @apply lg:min-w-designlg lg:mt-12 lg:right-0 lg:top-5 lg:-left-10;
+      @apply lg:min-w-designlg lg:mt-16 lg:-right-3.5 lgplus:mt-12 lgplus:right-0;
     }
   }
   & hr {

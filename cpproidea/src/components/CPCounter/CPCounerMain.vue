@@ -31,40 +31,38 @@ export default {
                       url("../../assets/img/countUsersIcons/right.png");
     background-position: left center, right center;
     background-size: 0px;
-    @apply sm:mb-12;
+    @apply sm:mb-32;
     @apply smlger:mb-32;
     @apply lg:bg-counter;
     @apply lg:flex lg:justify-center items-center;
   
     & .left, .right{
       @apply flex justify-center items-center;
-      
 
     }
 
     & .left{
-      @apply sm:flex-col sm:mb-10;
-      @apply lg:flex-row lg:mr-10 ml-5 lgplus:ml-16 lgplus:mr-16;
+      @apply sm:flex-col sm:mb-10 sm:mr-3;
+      @apply lg:flex-row lg:mr-14 lgplus:mr-16 lg:ml-40 lg:mt-12;
       & img{
         @apply mb-2;
         @apply sm:w-24;
-        @apply lg:w-20;
+        @apply lg:w-19;
       }
     }
     & .right{
-      @apply sm:flex-col;
-      @apply lg:flex-row lg:-mt-3;
-      @apply lgplus:-mt-3;
+      @apply sm:flex-col sm:-ml-4;
+      @apply lg:flex-row lg:mt-7 lg:ml-14 ;
       & img{
         @apply mb-6;
         @apply sm:w-20;
-        @apply lg:w-16;
+        @apply lg:w-14;
       }
     }
     
     & .count, .count2{
       @apply font-medium;
-      @apply sm:text-4xl sm:tracking-wide smlger:text-5xl;
+      @apply sm:text-4xl sm:tracking-wide smlger:text-5xl w-max;
       @apply lg:text-2xl lg:self-start;
       color: rgba(66, 91, 140, 1);
     }

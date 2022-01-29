@@ -1,6 +1,6 @@
 <template>
   <div class="card" :class="{'sm:hidden': !popular}" @mouseenter="ActiveCard">
-    <img :src="require(`../../assets/img/cardsBG/${bgImg}`)" alt="" class="sm:opacity-100 lg:opacity-50" />
+    <img :src="require(`../../assets/img/cardsBG/${bgImg}`)" alt="" class="sm:opacity-100 xl:opacity-50" />
     <div class="PrcTxt">
       <p class="Popular" v-if="popular == true">Most popular</p>
       <p class="Days">{{ days }} days</p>
@@ -61,10 +61,10 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  @apply w-88 h-142;
   @apply bg-gray-50 py-8 rounded-3xl shadow-2xl mb-24  duration-300 transition-all bg-no-repeat;
-  @apply lg:flex flex-col;
-  width: 350px;
-  height: 550px;
+  @apply lg:flex lg:flex-col lg:w-64 lg:h-120 lgplus:w-80 lgplus:h-142;
+  @apply xl:w-84 xlplus:w-88;
 
   & img {
     @apply -mb-40 rounded-t-3xl -mt-8 transition-all duration-500;
@@ -76,12 +76,12 @@ export default {
     & .Popular {
       @apply text-green-400 text-center;
       @apply sm:mt-7 sm:text-lg sm:-mb-6 smlger:mt-3;
-      @apply lg:text-sm lg:mt-1;
+      @apply lg:text-sm lg:mt-12 lg:-mb-14 lgplus:mt-4 lgplus:-mb-4;
     }
     & .Days {
       @apply text-blue-900 text-center mb-7 mt-5;
       @apply sm:text-4xl;
-      @apply lg:text-3xl lg:mt-8;
+      @apply lg:text-3xl lg:mt-14 lgplus:mt-8;
     }
     & .Price {
       @apply text-purple-400 text-center;
@@ -109,13 +109,14 @@ export default {
   hr {
     @apply flex mx-auto;
     @apply sm:mt-7 sm:mb-9;
-    @apply lg:mt-10 lg:mb-12;
+    @apply lg:mt-10 lg:mb-3 lgplus:mb-12;
     width: 200px;
   }
   & .SgUp {
-    @apply flex self-center flex-col duration-700 transition-all;
+    @apply flex self-center flex-col duration-300 transition-all;
     @apply sm:opacity-100;
-    @apply lg:opacity-0;
+    @apply lgplus:duration-500;
+    @apply xl:opacity-0;
     & .SgBtn {
       @apply bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-center text-gray-50 font-thin flex items-center justify-center self-center;
     }
@@ -125,7 +126,8 @@ export default {
   }
 }
 .card:hover {
-  @apply lg:-mx-6 lg:w-98 lg:h-144 lg:mb-0;
+  @apply xl:mb-0 xl:-mx-4 xl:w-92 xl:h-143 xlplus:w-96;
+
 
   & .SgUp {
     @apply opacity-100;
