@@ -97,12 +97,13 @@ export default {
 
       & img {
         @apply w-5 h-4 mt-2 mr-12;
-        @apply lg:w-4 h-3;
+        @apply smlger:mr-5;
+        @apply lg:w-4 lg:h-3 lg:mr-12;
       }
     }
     & .Features {
       @apply text-blue-900 opacity-60 mb-5;
-      @apply sm:text-xl sm:ml-8;
+      @apply sm:text-xl sm:ml-8 smlger:ml-14;
       @apply lg:tracking-widest lg:text-sm lg:ml-14;
     }
   }

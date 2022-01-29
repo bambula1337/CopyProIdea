@@ -43,7 +43,7 @@ export default {
 
     & .left{
       @apply sm:flex-col sm:mb-10 sm:mr-3;
-      @apply lg:flex-row lg:mr-14 lgplus:mr-16 lg:ml-40 lg:mt-12;
+      @apply lg:ml-10 lg:flex-row lg:mr-14 lgplus:mr-16 lgplus:ml-40 lg:mt-12;
       & img{
         @apply mb-2;
         @apply sm:w-24;
