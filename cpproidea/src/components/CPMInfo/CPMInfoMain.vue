@@ -63,7 +63,7 @@ export default {
   @apply md:mt-32;
   @apply lg:flex-row;
   & .left-info {
-    @apply flex flex-col items-center w-1/2 z-10;
+    @apply flex flex-col items-center w-1/2;
     @apply md:ml-12;
   }
   & .right-info {

@@ -61,8 +61,9 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  @apply w-88 h-142;
+  @apply w-88;
   @apply bg-gray-50 py-8 rounded-3xl shadow-2xl mb-24  duration-300 transition-all bg-no-repeat;
+  @apply sm:h-143 smlger:h-142;
   @apply lg:flex lg:flex-col lg:w-64 lg:h-120 lgplus:w-80 lgplus:h-142;
   @apply xl:w-84 xlplus:w-88;
 
@@ -96,14 +97,14 @@ export default {
       @apply flex justify-between;
 
       & img {
-        @apply w-5 h-4 mt-2 mr-12;
+        @apply w-5 h-4 mt-2 mr-7;
         @apply smlger:mr-5;
         @apply lg:w-4 lg:h-3 lg:mr-12;
       }
     }
     & .Features {
       @apply text-blue-900 opacity-60 mb-5;
-      @apply sm:text-xl sm:ml-8 smlger:ml-14;
+      @apply sm:text-xl sm:ml-14 smlger:ml-14;
       @apply lg:tracking-widest lg:text-sm lg:ml-14;
     }
   }

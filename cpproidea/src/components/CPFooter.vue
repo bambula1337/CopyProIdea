@@ -103,6 +103,7 @@ export default {
 
     & .contact {
       @apply flex text-left flex-col;
+      @apply sm:ml-2 smlger:ml-0;
       @apply lg:w-1/4 lgplus:w-1/6;
       @apply xl:w-3/20 xl:-mr-6;
       & .contactmaintext {

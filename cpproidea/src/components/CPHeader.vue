@@ -1,18 +1,53 @@
 <template>
   <header class="header">
-    <p class="logo sm: sm:text-4xl sm:font-normal smlger:-ml-4">Skybox</p>
+    <p class="logo">Skybox</p>
     <div class="navigation">
-      <div class="links sm:hidden">
-        <router-link to="/" class="nav-link-default" :active-class="'active'" exact>Home</router-link>
-        <router-link to="/pricing" class="nav-link-default" :active-class="'active'">Pricing</router-link>
-        <router-link to="/contact" class="nav-link-default" :active-class="'active'">Contact</router-link>
+      <div class="links">
+        <router-link
+          to="/"
+          class="nav-link-default"
+          :active-class="'active'"
+          exact
+          >Home</router-link
+        >
+        <router-link
+          to="/pricing"
+          class="nav-link-default"
+          :active-class="'active'"
+          >Pricing</router-link
+        >
+        <router-link
+          to="/contact"
+          class="nav-link-default"
+          :active-class="'active'"
+          >Contact</router-link
+        >
       </div>
-      <div class="login sm:hidden">
-        <router-link to="/login" class="login-link" :active-class="'active'" exact>Login</router-link>
-        <router-link to="/signup" class="sign-up-link" :active-class="'active'"><button>Sign Up</button></router-link>
+      <div class="login">
+        <router-link
+          to="/login"
+          class="login-link"
+          :active-class="'active'"
+          exact
+          >Login</router-link
+        >
+        <router-link to="/signup" class="sign-up-link" :active-class="'active'"
+          ><button>Sign Up</button></router-link
+        >
       </div>
-      <div class="mobilemenu smlger:ml-24">
-        <img src="../assets/img/header/MENU.png" alt="">
+      <div class="mobilemenu" @click="Toggle">
+        <img src="../assets/img/header/MENU.png" alt="" />
+      </div>
+      <div class="menu hidden">
+        <div class="linksmobile">
+          <router-link to="/" class="linkmobile" :active-class="'mobileactive'" exact>Home</router-link>
+          <router-link to="/pricing" class="linkmobile" :active-class="'mobileactive'">Pricing</router-link>
+          <router-link to="/contact" class="linkmobile" :active-class="'mobileactive'">Contact</router-link>
+        </div>
+        <div class="btnsmobile">
+          <router-link to="/login" class="loginmobile" :active-class="''" exact>Login</router-link>
+          <router-link to="/signup" class="btnmobile" :active-class="''"><button>Sign Up</button></router-link>
+        </div>
       </div>
     </div>
   </header>
@@ -21,6 +56,19 @@
 <script>
 export default {
   name: "CPHeader",
+  methods: {
+    Toggle: function () {
+      const menu = document.querySelector(".menu");
+
+      menu.classList.toggle("hidden");
+      if (menu.classList.contains("hidden")) {
+        document.body.style.overflow = "visible";
+      } else {
+        document.body.style.overflow = "hidden";
+        window.scroll(0, 0);
+      }
+    },
+  },
 };
 </script>
 
@@ -28,32 +76,72 @@ export default {
 .header {
   @apply flex justify-around items-center bg-transparent h-16 absolute top-0 left-0 z-10 w-full mt-3;
 
-  & .logo{
-    @apply uppercase text-gray-50 tracking-widest;
+  & .logo {
+    @apply uppercase text-gray-50 tracking-widest z-30;
+    @apply sm:text-4xl sm:font-normal smlger:-ml-4;
+    @apply lgplus:ml-3;
+    @apply xl:-ml-10;
   }
 
   & .navigation {
     @apply flex;
+    @apply lgplus:mt-2;
 
-    & .links{
+    & .links {
       @apply mr-44;
+      @apply sm:hidden;
+      @apply lgplus:flex lgplus:mt-2;
     }
     & .nav-link-default {
       @apply mx-12 text-purple-50 tracking-wider;
-      &.active{
+      &.active {
         @apply text-purple-50;
       }
     }
-    & .login{
+    & .login {
       @apply text-gray-50;
+      @apply sm:hidden;
+      @apply lgplus:flex;
 
-      & .login-link{
+      & .login-link {
         @apply mr-16 uppercase tracking-widest;
+        @apply lgplus:mt-2;
       }
 
-      & .sign-up-link{
-        & button{
+      & .sign-up-link {
+        & button {
           @apply uppercase bg-gray-50 text-purple-700 rounded-full w-28 h-9 text-xs tracking-widest;
+        }
+      }
+    }
+    & .mobilemenu {
+      @apply smlger:ml-24 z-30;
+      @apply lgplus:hidden;
+    }
+    & .menu {
+      @apply bg-gradient-to-r from-indigo-400 to-indigo-500 absolute left-0 -top-3 z-20;
+      @apply lgplus:hidden;
+      width: 100vw;
+      height: 100vh;
+
+      & .linksmobile{
+        @apply flex w-full flex-col items-center self-center pt-52;
+        & .linkmobile{
+          @apply text-blue-50 text-3xl mb-10;
+          &.mobileactive{
+            @apply text-purple-200 underline;
+          }
+        }
+      }
+
+      & .btnsmobile{
+        @apply flex w-full flex-col items-center;
+        & .loginmobile{
+          @apply text-3xl text-purple-100 mb-10 mt-32;
+        }
+
+        & .btnmobile{
+          @apply text-3xl text-purple-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex;
         }
       }
     }
