@@ -31,4 +31,24 @@ export default {
 .base-content {
   @apply min-h-screen relative;
 }
+
+::-webkit-scrollbar {
+  width: 0.6vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-purple-400;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-500;
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-600;
+}
 </style>

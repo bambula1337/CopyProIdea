@@ -38,7 +38,7 @@
       <div class="mobilemenu" @click="Toggle">
         <img src="../assets/img/header/MENU.png" alt="" />
       </div>
-      <div class="menu hidden">
+      <div class="menu">
         <div class="linksmobile">
           <router-link to="/" class="linkmobile" :active-class="'mobileactive'" exact>Home</router-link>
           <router-link to="/pricing" class="linkmobile" :active-class="'mobileactive'">Pricing</router-link>
@@ -60,12 +60,13 @@ export default {
     Toggle: function () {
       const menu = document.querySelector(".menu");
 
-      menu.classList.toggle("hidden");
-      if (menu.classList.contains("hidden")) {
-        document.body.style.overflow = "visible";
-      } else {
+      if (menu.style.display == "none") {
+        menu.style.display = "flex";
         document.body.style.overflow = "hidden";
         window.scroll(0, 0);
+      } else {
+        menu.style.display = "none";
+        document.body.style.overflow = "visible";
       }
     },
   },
@@ -119,13 +120,14 @@ export default {
       @apply lgplus:hidden;
     }
     & .menu {
-      @apply bg-gradient-to-r from-indigo-400 to-indigo-500 absolute left-0 -top-3 z-20;
+      @apply bg-gradient-to-r from-indigo-400 to-indigo-500 absolute left-0 -top-3 z-20 hidden flex-col justify-between;
       @apply lgplus:hidden;
       width: 100vw;
       height: 100vh;
 
       & .linksmobile{
-        @apply flex w-full flex-col items-center self-center pt-52;
+        @apply flex w-full flex-col items-center self-center;
+        padding-top: 60%;
         & .linkmobile{
           @apply text-blue-50 text-3xl mb-10;
           &.mobileactive{
@@ -137,11 +139,12 @@ export default {
       & .btnsmobile{
         @apply flex w-full flex-col items-center;
         & .loginmobile{
-          @apply text-3xl text-purple-100 mb-10 mt-32;
+          @apply text-3xl text-purple-100 mb-10;
         }
 
         & .btnmobile{
           @apply text-3xl text-purple-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex;
+          margin-bottom: 10%;
         }
       }
     }
