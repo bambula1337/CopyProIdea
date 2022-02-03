@@ -120,7 +120,7 @@ export default {
       @apply lgplus:hidden;
     }
     & .menu {
-      @apply bg-gradient-to-r from-indigo-400 to-indigo-500 absolute left-0 -top-3 z-20 hidden flex-col justify-between;
+      @apply bg-gradient-to-r from-indigo-400 to-indigo-500 absolute left-0 -top-3 z-20 hidden flex-col justify-between overflow-x-auto;
       @apply lgplus:hidden;
       width: 100vw;
       height: 100vh;
