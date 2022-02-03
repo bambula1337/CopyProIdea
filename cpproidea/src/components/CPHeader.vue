@@ -126,10 +126,11 @@ export default {
       height: 100vh;
 
       & .linksmobile{
-        @apply flex w-full flex-col items-center self-center;
-        padding-top: 60%;
+        @apply flex w-full flex-col items-center self-center pt-3/5;
+        @apply smlger:pt-40proc;
         & .linkmobile{
           @apply text-blue-50 text-3xl mb-10;
+          @apply md:text-5xl md:mb-20;
           &.mobileactive{
             @apply text-purple-200 underline;
           }
@@ -140,11 +141,12 @@ export default {
         @apply flex w-full flex-col items-center;
         & .loginmobile{
           @apply text-3xl text-purple-100 mb-10;
+          @apply md:text-5xl;
         }
 
         & .btnmobile{
-          @apply text-3xl text-purple-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex;
-          margin-bottom: 10%;
+          @apply text-3xl text-purple-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex mb-10proc;
+          @apply md:text-5xl md:w-60 md:h-20;
         }
       }
     }
