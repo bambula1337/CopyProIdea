@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <CPHeader/>
+    <div :class="{bgimg: $route.name != 'Home'}">
+      <CPHeader/>
+    </div>
     <main class="base-content">
       <router-view/>
     </main>
@@ -50,5 +52,16 @@ export default {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-purple-600;
+}
+
+.bgimg{
+  @apply bg-no-repeat overflow-hidden;
+  width: 100%;
+  height: 350px;
+  background-image: url("assets/img/BGHeader.png");
+}
+
+body{
+  @apply overflow-x-hidden;
 }
 </style>
