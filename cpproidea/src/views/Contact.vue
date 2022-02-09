@@ -1,6 +1,13 @@
 <template>
   <div class="contact">
-    <p>qq</p>
+    <WlcText
+      v-for="(item, index) in WlcTextprops"
+      :key="index"
+      :main="item.main"
+      :sub="item.sub"
+    />
+    <img src="@/assets/img/contact/MAP.png" class="map" alt="map">
+    <Form />
     <CPCount
       v-for="(item, index) in counter"
       :key="index"
@@ -16,10 +23,15 @@
 
 <script>
 import CPCount from "@/components/CPCounter/CPCounerMain.vue";
+import WlcText from "@/components/WlcText.vue";
+import Form from '@/components/Form.vue';
 
 export default {
+  name: "Contact",
   components: {
     CPCount,
+    WlcText,
+    Form,
   },
   data() {
     return {
@@ -34,13 +46,24 @@ export default {
           dataicon2: "adduser.png",
         },
       ],
+      WlcTextprops: [
+        {
+          id: 1,
+          main: "Contact",
+          sub: "Online Storage",
+        },
+      ],
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.contact{
+.contact {
   @apply pt-0;
+  & .map{
+    @apply mt-14 overflow-hidden;
+    max-width: 1920px;
+  }
 }
 </style>

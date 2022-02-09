@@ -55,7 +55,7 @@ export default {
 }
 
 .bgimg{
-  @apply bg-no-repeat overflow-hidden;
+  @apply bg-no-repeat overflow-hidden -mb-10;
   width: 100%;
   height: 350px;
   background-image: url("assets/img/BGHeader.png");
