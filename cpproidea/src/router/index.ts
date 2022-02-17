@@ -15,6 +15,12 @@ const routes: Array<RouteConfig> = [
     name: "Contact",
     component: () => import("@/views/Contact.vue"),
   },
+  
+  {
+    path:"/pricing",
+    name: "Pricing",
+    component: () => import("@/views/Pricing.vue"),
+  },
 ];
 
 const router = new VueRouter({
