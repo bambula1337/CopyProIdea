@@ -140,6 +140,7 @@ module.exports = {
       none: '0px',
       counter: '100px, 150px',
       full: '100%',
+      '9.5rem': '9.5rem',
     },
     blur: {
       0: '0',

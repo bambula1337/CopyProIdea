@@ -6,7 +6,9 @@
       :main="item.main"
       :sub="item.sub"
     />
-    <img src="@/assets/img/contact/MAP.png" class="map" alt="map">
+    <div class="mapwrapper">
+      <img src="@/assets/img/contact/MAP.png" class="map" alt="map" />
+    </div>
     <Form />
     <CPCount
       v-for="(item, index) in counter"
@@ -24,7 +26,7 @@
 <script>
 import CPCount from "@/components/CPCounter/CPCounerMain.vue";
 import WlcText from "@/components/WlcText.vue";
-import Form from '@/components/Form.vue';
+import Form from "@/components/Form.vue";
 
 export default {
   name: "Contact",
@@ -61,9 +63,12 @@ export default {
 <style lang="scss" scoped>
 .contact {
   @apply pt-0;
-  & .map{
-    @apply mt-14 overflow-hidden;
-    max-width: 1920px;
+  & .mapwrapper {
+    @apply overflow-x-hidden;
+    & .map {
+      @apply mt-14 overflow-hidden;
+      max-width: 1920px;
+    }
   }
 }
 </style>

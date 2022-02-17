@@ -18,10 +18,11 @@ export default {
   color: rgba(59, 102, 141, 1);
   & .mainText {
     @apply text-6xl font-bold;
-    letter-spacing: 17px;
+    @apply smlger:tracking-rem101;
   }
   & .subText {
-    @apply text-xl font-thin tracking-rem101;
+    @apply font-thin tracking-px10 mt-3;
+    @apply smlger:tracking-rem101 smplus:text-xl;
   }
 }
 </style>

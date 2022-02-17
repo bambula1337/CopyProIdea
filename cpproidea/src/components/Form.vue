@@ -40,48 +40,58 @@ export default {
 <style lang="scss" scoped>
 .formwrapper {
   @apply flex flex-col items-center bg-no-repeat mb-36 pt-36 pb-12;
+  @apply smplus:px-0;
   background-image: url("../assets/img/form/formleft.gif"),
-                      url("../assets/img/form/formright.gif");
+    url("../assets/img/form/formright.gif");
   background-position: left center, right center;
-  background-size: 150px;
-  & input:focus{
+  background-size: 0px;
+  @apply md:bg-9.5rem;
+  & input:focus {
     border: 3px solid #a855f7;
-
   }
-  & textarea:focus{
+  & textarea:focus {
     border: 3px solid #a855f7;
   }
   & .toptext {
     @apply text-center;
     & .main {
-      @apply text-6xl tracking-wide;
+      @apply text-5xl tracking-wide;
+      @apply smlger:text-6xl;
       color: rgba(59, 102, 141, 1);
     }
     & .sub {
-      @apply text-xl tracking-widest mt-3 text-gray-500 mb-10;
+      @apply text-lg tracking-widest mt-3 text-gray-500 mb-10;
+      @apply smlger:text-xl;
     }
   }
   & .bottomcontent {
     & .inputs {
+      @apply items-center justify-center;
       color: rgba(59, 102, 141, 1);
       & .email {
         @apply flex items-center mb-2;
         & input {
-          @apply rounded-full text-left pl-5 h-13 w-88 transition-all duration-300 outline-none;
+          @apply rounded-full text-left pl-5 h-16 w-72 transition-all duration-300 outline-none;
+          @apply smplus:h-14 smplus:w-88;
           background-color: rgba(243, 243, 243, 1);
         }
         & p {
           @apply text-lg mr-7;
+          @apply sm:hidden;
+          @apply lg:block;
         }
       }
       & .name {
         @apply flex items-center;
         & input {
-          @apply rounded-full text-left pl-5 h-13 w-88 transition-all duration-300 outline-none;
+          @apply rounded-full text-left pl-5 h-16 w-full transition-all duration-300 outline-none;
+          @apply smplus:h-14 smplus:w-88;
           background-color: rgba(243, 243, 243, 1);
         }
         & p {
           @apply text-lg;
+          @apply sm:hidden;
+          @apply lg:block;
           margin-right: 1.4rem;
         }
       }
@@ -116,12 +126,17 @@ export default {
       }
     }
     & .btnwrapper {
-      @apply flex pt-3 items-center justify-between;
+      @apply flex pt-3 items-center justify-between flex-col;
+      @apply lg:flex-row;
       & p {
-        @apply text-gray-400 text-xs;
+        @apply text-gray-400 text-lg;
+        @apply smplus:text-xl;
+        @apply lg:text-xs;
+        
       }
       & button {
-        @apply text-gray-50 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full h-11 w-36;
+        @apply text-gray-50 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full h-14 w-48 text-xl mt-4;
+        @apply lg:h-11 lg:w-36 lg:text-base lg:mt-0;
       }
     }
   }
