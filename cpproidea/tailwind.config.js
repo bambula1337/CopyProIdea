@@ -89,6 +89,7 @@ module.exports = {
       '10proc': '10%',
       '40proc': '40%',
       '3/5': '60%',
+      '7/10': '0.7rem',
     },
     animation: {
       none: 'none',
