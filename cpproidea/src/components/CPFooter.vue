@@ -21,7 +21,7 @@
         <router-link to="/contact" class="link" :active-class="'active'"
           >Contact</router-link
         >
-        <router-link to="/dmca" class="link" :active-class="'active'"
+        <router-link to="/faq" class="link" :active-class="'active'"
           >DMCA</router-link
         >
         <router-link to="/refund" class="link" :active-class="'active'"
