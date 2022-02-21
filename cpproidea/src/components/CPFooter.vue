@@ -98,6 +98,10 @@ export default {
         @apply mb-2 underline;
         @apply md:text-xl;
         @apply lg:text-sm;
+        
+        &.active{
+          @apply text-blue-200;
+        }
       }
     }
 

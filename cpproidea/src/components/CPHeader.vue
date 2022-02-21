@@ -40,13 +40,33 @@
       </div>
       <div class="menu">
         <div class="linksmobile">
-          <router-link to="/" class="linkmobile" :active-class="'mobileactive'" exact>Home</router-link>
-          <router-link to="/pricing" class="linkmobile" :active-class="'mobileactive'">Pricing</router-link>
-          <router-link to="/contact" class="linkmobile" :active-class="'mobileactive'">Contact</router-link>
+          <router-link
+            to="/"
+            class="linkmobile"
+            :active-class="'mobileactive'"
+            exact
+            >Home</router-link
+          >
+          <router-link
+            to="/pricing"
+            class="linkmobile"
+            :active-class="'mobileactive'"
+            >Pricing</router-link
+          >
+          <router-link
+            to="/contact"
+            class="linkmobile"
+            :active-class="'mobileactive'"
+            >Contact</router-link
+          >
         </div>
         <div class="btnsmobile">
-          <router-link to="/login" class="loginmobile" :active-class="''" exact>Login</router-link>
-          <router-link to="/signup" class="btnmobile" :active-class="''"><button>Sign Up</button></router-link>
+          <router-link to="/login" class="loginmobile" :active-class="''" exact
+            >Login</router-link
+          >
+          <router-link to="/signup" class="btnmobile" :active-class="''"
+            ><button>Sign Up</button></router-link
+          >
         </div>
       </div>
     </div>
@@ -96,7 +116,7 @@ export default {
     & .nav-link-default {
       @apply mx-12 text-purple-50 tracking-wider;
       &.active {
-        @apply text-purple-50;
+        @apply text-blue-200 underline;
       }
     }
     & .login {
@@ -107,11 +127,21 @@ export default {
       & .login-link {
         @apply mr-16 uppercase tracking-widest;
         @apply lgplus:mt-2;
+
+        &.active {
+          @apply text-blue-200 underline;
+        }
       }
 
       & .sign-up-link {
         & button {
           @apply uppercase bg-gray-50 text-purple-700 rounded-full w-28 h-9 text-xs tracking-widest;
+        }
+
+        &.active{
+          & button{
+            @apply bg-blue-400 text-gray-50;
+          }
         }
       }
     }
@@ -125,26 +155,26 @@ export default {
       width: 100vw;
       height: 100vh;
 
-      & .linksmobile{
+      & .linksmobile {
         @apply flex w-full flex-col items-center self-center pt-3/5;
         @apply smlger:pt-40proc;
-        & .linkmobile{
+        & .linkmobile {
           @apply text-blue-50 text-3xl mb-10;
           @apply md:text-5xl md:mb-20;
-          &.mobileactive{
-            @apply text-purple-200 underline;
+          &.mobileactive {
+            @apply text-purple-400 underline;
           }
         }
       }
 
-      & .btnsmobile{
+      & .btnsmobile {
         @apply flex w-full flex-col items-center;
-        & .loginmobile{
+        & .loginmobile {
           @apply text-3xl text-purple-100 mb-10;
           @apply md:text-5xl;
         }
 
-        & .btnmobile{
+        & .btnmobile {
           @apply text-3xl text-purple-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex mb-10proc;
           @apply md:text-5xl md:w-60 md:h-20;
         }
@@ -152,5 +182,4 @@ export default {
     }
   }
 }
-
 </style>
