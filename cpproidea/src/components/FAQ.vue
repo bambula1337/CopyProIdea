@@ -160,7 +160,6 @@ export default {
     @apply text-left mb-5;
     width: 55rem;
 
-
     &[open] .closeimg {
       @apply opacity-0;
     }
@@ -169,6 +168,9 @@ export default {
       @apply opacity-100;
     }
 
+    &[open] summary {
+      @apply from-blue-300 to-purple-300;
+    }
 
     & p {
       @apply ml-5 mt-5 mb-7 text-gray-500;
@@ -179,7 +181,8 @@ export default {
     }
 
     & summary {
-      @apply flex h-14 bg-gradient-to-r from-blue-300 to-purple-300 rounded-t-2xl justify-between items-center text-2xl px-5 pt-2;
+      @apply flex h-14 bg-gradient-to-r from-blue-200 to-purple-200 rounded-t-2xl justify-between items-center text-2xl px-5 pt-2 transition-all duration-700;
+      
       width: 55rem;
       & p {
         @apply text-purple-900;
