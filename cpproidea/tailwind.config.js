@@ -85,6 +85,7 @@ module.exports = {
       142: '34rem',
       143: '36rem',
       144: '37.5rem',
+      220: '55rem',
       '19rem': '19rem',
       '10proc': '10%',
       '40proc': '40%',
@@ -142,6 +143,7 @@ module.exports = {
       counter: '100px, 150px',
       full: '100%',
       '9.5rem': '9.5rem',
+      '5rem': '5rem',
     },
     blur: {
       0: '0',

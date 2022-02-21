@@ -157,9 +157,9 @@ export default {
 .faq {
   @apply flex flex-col text-purple-900 items-center mt-20 mb-40;
   & details {
-    @apply text-left mb-5;
-    width: 55rem;
-
+    @apply text-left mb-5 w-72;
+    @apply smlger:w-98;
+    @apply lg:w-220;
     &[open] .closeimg {
       @apply opacity-0;
     }
@@ -181,9 +181,9 @@ export default {
     }
 
     & summary {
-      @apply flex h-14 bg-gradient-to-r from-blue-200 to-purple-200 rounded-t-2xl justify-between items-center text-2xl px-5 pt-2 transition-all duration-700;
-      
-      width: 55rem;
+      @apply flex h-14 bg-gradient-to-r from-blue-200 to-purple-200 rounded-t-2xl justify-between items-center text-2xl px-5 pt-3 transition-all duration-700 w-72;
+      @apply smlger:w-98;
+      @apply lg:w-220;
       & p {
         @apply text-purple-900;
         &::selection {
@@ -207,5 +207,7 @@ export default {
       }
     }
   }
+
 }
+
 </style>

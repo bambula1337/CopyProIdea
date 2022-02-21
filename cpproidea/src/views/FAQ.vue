@@ -1,12 +1,14 @@
 <template>
   <div class="faqpage">
-    <WlcText
-      v-for="(item, index) in WlcTextprops"
-      :key="index"
-      :main="item.main"
-      :sub="item.sub"
-    />
-    <FAQComponent />
+    <div class="bg">
+      <WlcText
+        v-for="(item, index) in WlcTextprops"
+        :key="index"
+        :main="item.main"
+        :sub="item.sub"
+      />
+      <FAQComponent />
+    </div>
     <CPCounter
       v-for="(item, index) in counter"
       :key="index"
@@ -22,7 +24,7 @@
 
 <script>
 import WlcText from "@/components/WlcText.vue";
-import FAQComponent from "@/components/FAQ.vue"
+import FAQComponent from "@/components/FAQ.vue";
 import CPCounter from "@/components/CPCounter/CPCounerMain.vue";
 
 export default {
@@ -58,4 +60,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.faqpage{
+  .bg{
+    @apply bg-no-repeat;
+    background-image: url("../assets/img/bg/bgLeft.png"),
+                      url("../assets/img/bg/bgRight.png");
+    background-position: left -1.4rem, right -1.4rem;
+    background-size: 0px;
+    @apply lgplus:bg-5rem;
+  }
+}
 </style>
