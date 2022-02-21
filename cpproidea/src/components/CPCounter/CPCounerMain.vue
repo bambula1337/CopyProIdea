@@ -55,8 +55,8 @@ export default {
       @apply lg:flex-row lg:mt-7 lg:ml-14 ;
       & img{
         @apply mb-6;
-        @apply sm:w-20;
-        @apply lg:w-14;
+        @apply sm:w-20 sm:ml-2;
+        @apply lg:w-14 lg:ml-0;
       }
     }
     
@@ -74,8 +74,8 @@ export default {
     }
     & .righttext{
       @apply ml-5 flex justify-center items-center flex-col;
-      @apply sm:flex sm:flex-col sm:text-center;
-      @apply lg:mt-1 lgplus:-mt-6;
+      @apply sm:flex sm:ml-3 sm:flex-col sm:text-center;
+      @apply lg:mt-1 lg:ml-5 lgplus:-mt-6;
     }
     & .lefttext{
       @apply ml-5 flex justify-center items-center flex-col mr-4;

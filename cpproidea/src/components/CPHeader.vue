@@ -61,10 +61,10 @@
           >
         </div>
         <div class="btnsmobile">
-          <router-link to="/login" class="loginmobile" :active-class="''" exact
+          <router-link to="/login" class="loginmobile" :active-class="'active'" exact
             >Login</router-link
           >
-          <router-link to="/signup" class="btnmobile" :active-class="''"
+          <router-link to="/signup" class="btnmobile" :active-class="'active'"
             ><button>Sign Up</button></router-link
           >
         </div>
@@ -114,7 +114,7 @@ export default {
       @apply lgplus:flex lgplus:mt-2;
     }
     & .nav-link-default {
-      @apply mx-12 text-purple-50 tracking-wider;
+      @apply mx-12 text-purple-50 tracking-wider transition-all duration-500;
       &.active {
         @apply text-blue-200 underline;
       }
@@ -125,7 +125,7 @@ export default {
       @apply lgplus:flex;
 
       & .login-link {
-        @apply mr-16 uppercase tracking-widest;
+        @apply mr-16 uppercase tracking-widest transition-all duration-500;
         @apply lgplus:mt-2;
 
         &.active {
@@ -135,7 +135,7 @@ export default {
 
       & .sign-up-link {
         & button {
-          @apply uppercase bg-gray-50 text-purple-700 rounded-full w-28 h-9 text-xs tracking-widest;
+          @apply uppercase bg-gray-50 text-purple-700 rounded-full w-28 h-9 text-xs tracking-widest transition-all duration-300;
         }
 
         &.active{
@@ -150,7 +150,7 @@ export default {
       @apply lgplus:hidden;
     }
     & .menu {
-      @apply bg-gradient-to-r from-indigo-400 to-indigo-500 absolute left-0 -top-3 z-20 hidden flex-col justify-between overflow-x-auto;
+      @apply bg-gradient-to-r from-blue-300 to-blue-400 absolute left-0 -top-3 z-20 hidden flex-col justify-between overflow-x-auto;
       @apply lgplus:hidden;
       width: 100vw;
       height: 100vh;
@@ -159,10 +159,10 @@ export default {
         @apply flex w-full flex-col items-center self-center pt-3/5;
         @apply smlger:pt-40proc;
         & .linkmobile {
-          @apply text-blue-50 text-3xl mb-10;
+          @apply text-blue-50 text-3xl mb-10 transition-all duration-300;
           @apply md:text-5xl md:mb-20;
           &.mobileactive {
-            @apply text-purple-400 underline;
+            @apply text-blue-200 underline;
           }
         }
       }
@@ -170,13 +170,21 @@ export default {
       & .btnsmobile {
         @apply flex w-full flex-col items-center;
         & .loginmobile {
-          @apply text-3xl text-purple-100 mb-10;
+          @apply text-3xl text-purple-100 mb-10 transition-all duration-500;
           @apply md:text-5xl;
+
+          &.active{
+            @apply text-blue-100 underline;
+          }
         }
 
         & .btnmobile {
-          @apply text-3xl text-purple-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex mb-10proc;
-          @apply md:text-5xl md:w-60 md:h-20;
+          @apply text-3xl text-blue-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex mb-10proc;
+          @apply md:text-5xl md:w-60 md:h-20 transition-all duration-300;
+
+          &.active{
+            @apply bg-blue-400 text-blue-50;
+          }
         }
       }
     }

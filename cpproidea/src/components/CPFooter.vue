@@ -95,7 +95,7 @@ export default {
       }
 
       & .link {
-        @apply mb-2 underline;
+        @apply mb-2 underline transition-all duration-500;
         @apply md:text-xl;
         @apply lg:text-sm;
         
