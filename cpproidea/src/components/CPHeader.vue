@@ -61,7 +61,11 @@
           >
         </div>
         <div class="btnsmobile">
-          <router-link to="/login" class="loginmobile" :active-class="'active'" exact
+          <router-link
+            to="/login"
+            class="loginmobile"
+            :active-class="'active'"
+            exact
             >Login</router-link
           >
           <router-link to="/signup" class="btnmobile" :active-class="'active'"
@@ -114,9 +118,21 @@ export default {
       @apply lgplus:flex lgplus:mt-2;
     }
     & .nav-link-default {
-      @apply mx-12 text-purple-50 tracking-wider transition-all duration-500;
+      @apply mx-12 text-purple-50 tracking-wider transition-all duration-500 flex flex-col items-center;
       &.active {
-        @apply text-blue-200 underline;
+        @apply text-blue-200;
+
+        &::after {
+          content: " ";
+          @apply flex w-full h-0 bg-blue-200 -mt-1;
+          border: 1px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+        }
+      }
+
+      &::after {
+        content: " ";
+        @apply flex w-0 h-0 bg-blue-200 -mt-1  transition-all duration-500;
+        border: 0px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
       }
     }
     & .login {
@@ -125,11 +141,23 @@ export default {
       @apply lgplus:flex;
 
       & .login-link {
-        @apply mr-16 uppercase tracking-widest transition-all duration-500;
+        @apply mr-16 uppercase tracking-widest transition-all duration-500 flex flex-col items-center;
         @apply lgplus:mt-2;
 
         &.active {
-          @apply text-blue-200 underline;
+          @apply text-blue-200;
+
+          &::after {
+            content: " ";
+            @apply flex w-full h-0 bg-blue-200 -mt-1;
+            border: 1px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+          }
+        }
+
+        &::after {
+          content: " ";
+          @apply flex w-0 h-0 bg-blue-200 -mt-1  transition-all duration-500;
+          border: 0px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
         }
       }
 
@@ -138,8 +166,8 @@ export default {
           @apply uppercase bg-gray-50 text-purple-700 rounded-full w-28 h-9 text-xs tracking-widest transition-all duration-300;
         }
 
-        &.active{
-          & button{
+        &.active {
+          & button {
             @apply bg-blue-400 text-gray-50;
           }
         }
@@ -173,7 +201,7 @@ export default {
           @apply text-3xl text-purple-100 mb-10 transition-all duration-500;
           @apply md:text-5xl;
 
-          &.active{
+          &.active {
             @apply text-blue-100 underline;
           }
         }
@@ -182,7 +210,7 @@ export default {
           @apply text-3xl text-blue-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex mb-10proc;
           @apply md:text-5xl md:w-60 md:h-20 transition-all duration-300;
 
-          &.active{
+          &.active {
             @apply bg-blue-400 text-blue-50;
           }
         }
