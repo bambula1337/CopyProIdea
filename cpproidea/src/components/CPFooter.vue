@@ -99,8 +99,16 @@ export default {
         @apply md:text-xl;
         @apply lg:text-sm;
         
-        &.active{
+        &:hover{
           @apply text-blue-200;
+        }
+
+        &.active{
+          @apply text-blue-300;
+
+          &:hover{
+            @apply text-blue-300;
+          }
         }
       }
     }

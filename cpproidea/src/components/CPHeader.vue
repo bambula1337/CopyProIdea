@@ -127,13 +127,17 @@ export default {
           @apply flex w-full h-0 bg-blue-200 -mt-1;
           border: 1px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
         }
+
+       
       }
 
       &::after {
         content: " ";
-        @apply flex w-0 h-0 bg-blue-200 -mt-1  transition-all duration-500;
+        @apply flex w-0 h-0 bg-blue-200 -mt-1  transition-all duration-700;
         border: 0px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
       }
+
+      
     }
     & .login {
       @apply text-gray-50;
@@ -163,12 +167,21 @@ export default {
 
       & .sign-up-link {
         & button {
-          @apply uppercase bg-gray-50 text-purple-700 rounded-full w-28 h-9 text-xs tracking-widest transition-all duration-300;
+          @apply uppercase bg-gray-50 text-purple-700 rounded-full w-28 h-9 text-xs tracking-widest transition-all duration-500;
+
+          &:hover {
+            @apply bg-blue-400 text-blue-50;
+          }
         }
 
         &.active {
           & button {
-            @apply bg-blue-400 text-gray-50;
+            @apply text-gray-50;
+            background-color: rgba(59, 170, 246, var(--tw-bg-opacity));
+
+            &:hover {
+              background-color: rgba(59, 170, 246, var(--tw-bg-opacity));
+            }
           }
         }
       }
