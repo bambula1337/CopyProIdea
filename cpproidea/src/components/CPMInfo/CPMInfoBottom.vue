@@ -8,7 +8,9 @@
         <p class="info">{{ mainText }}</p>
       </div>
     </div>
-    <button class="tryNow">{{ btnText }}</button>
+    <button class="tryNow">
+      <p>{{ btnText }}</p>
+    </button>
   </div>
 </template>
 
@@ -25,7 +27,7 @@ export default {
   @apply flex flex-col;
   @apply sm:max-w-xsminus smlger:-ml-7 smlger:self-center smlger:-mr-3 smplus:-mr-0;
 
-  & .topcontent{
+  & .topcontent {
     @apply -ml-2.5;
   }
 
@@ -50,6 +52,24 @@ export default {
   & .tryNow {
     @apply text-gray-50 bg-gradient-to-r from-blue-400 to-purple-500 w-64 h-16 rounded-full -mr-10 text-xl;
     @apply lg:-ml-14 lg:h-14 lg:text-base lg:w-56;
+
+    & p {
+      @apply flex flex-col items-center -mb-0.5;
+
+      &::after {
+        content: " ";
+        @apply flex w-0 h-0 bg-blue-200 transition-all duration-700;
+        border: 0px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+      }
+    }
+    &:hover p {
+      @apply -mb-0.5;
+      &::after {
+        content: " ";
+        @apply flex w-1/2;
+        border: 0.5px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+      }
+    }
   }
 }
 </style>

@@ -25,7 +25,7 @@
       </div>
       <div class="btnwrapper">
         <p>We do not share your personal data.</p>
-        <button type="submit">Subscribe</button>
+        <button type="submit"><p>Subscribe</p></button>
       </div>
     </div>
   </div>
@@ -132,11 +132,30 @@ export default {
         @apply text-gray-400 text-lg;
         @apply smplus:text-xl;
         @apply lg:text-xs;
-        
       }
       & button {
         @apply text-gray-50 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full h-14 w-48 text-xl mt-4;
         @apply lg:h-11 lg:w-36 lg:text-base lg:mt-0;
+
+        & p {
+          @apply flex flex-col items-center text-blue-50 -mb-0.5;
+
+          &::after {
+            content: " ";
+            @apply flex w-0 h-0 bg-blue-200 transition-all duration-700;
+            border: 0px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+          }
+        }
+        &:hover {
+          p {
+            @apply -mb-0.5;
+            &::after {
+              content: " ";
+              @apply flex w-40proc;
+              border: 0.5px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+            }
+          }
+        }
       }
     }
   }

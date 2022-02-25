@@ -1,6 +1,10 @@
 <template>
-  <div class="card" :class="{'sm:hidden': !popular}" @mouseenter="ActiveCard">
-    <img :src="require(`../../assets/img/cardsBG/${bgImg}`)" alt="" class="sm:opacity-100 xl:opacity-50" />
+  <div class="card" :class="{ 'sm:hidden': !popular }" @mouseenter="ActiveCard">
+    <img
+      :src="require(`../../assets/img/cardsBG/${bgImg}`)"
+      alt=""
+      class="sm:opacity-100 xl:opacity-50"
+    />
     <div class="PrcTxt">
       <p class="Popular" v-if="popular == true">Most popular</p>
       <p class="Days">{{ days }} days</p>
@@ -26,7 +30,17 @@
       </div>
     </div>
     <div class="SgUp">
-      <button class="SgBtn sm:text-xl sm:tracking-wider sm:w-36 sm:h-11 sm:mt-4 sm:mb-6 smlger:mb-4 smlger:mt-6 lg:tracking-normal lg:w-52 lg:h-12 lg:mt-5 lg:mb-3 lg:text-base" v-if="btn == true">Sing Up</button>
+      <button
+        class="
+          SgBtn
+          sm:text-xl sm:tracking-wider sm:w-36 sm:h-11 sm:mt-4 sm:mb-6
+          smlger:mb-4 smlger:mt-6
+          lg:tracking-normal lg:w-52 lg:h-12 lg:mt-5 lg:mb-3 lg:text-base
+        "
+        v-if="btn == true"
+      >
+        <p>Sing Up</p>
+      </button>
       <p>{{ mback }}</p>
     </div>
   </div>
@@ -121,6 +135,27 @@ export default {
     @apply xl:opacity-0;
     & .SgBtn {
       @apply bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-center text-gray-50 font-thin flex items-center justify-center self-center;
+
+      & p {
+        @apply flex flex-col items-center text-blue-50 -mb-0.5;
+
+        &::after {
+          content: " ";
+          @apply flex w-0 h-0 bg-blue-200 transition-all duration-700;
+          border: 0px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+        }
+      }
+
+      &:hover {
+        p {
+          @apply -mb-0.5;
+          &::after {
+            content: " ";
+            @apply flex w-full;
+            border: 0.5px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+          }
+        }
+      }
     }
     & p {
       @apply text-blue-900 text-sm tracking-widest text-center;
@@ -129,7 +164,6 @@ export default {
 }
 .card:hover {
   @apply xl:mb-0 xl:-mx-4 xl:w-92 xl:h-143 xlplus:w-96;
-
 
   & .SgUp {
     @apply opacity-100;
