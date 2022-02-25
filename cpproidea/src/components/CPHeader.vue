@@ -31,7 +31,7 @@
           exact
           >Login</router-link
         >
-        <router-link to="/signup" class="sign-up-link" :active-class="'active'"
+        <router-link to="/register" class="sign-up-link" :active-class="'active'"
           ><button>Sign Up</button></router-link
         >
       </div>
@@ -68,7 +68,7 @@
             exact
             >Login</router-link
           >
-          <router-link to="/signup" class="btnmobile" :active-class="'active'"
+          <router-link to="/register" class="btnmobile" :active-class="'active'"
             ><button>Sign Up</button></router-link
           >
         </div>
