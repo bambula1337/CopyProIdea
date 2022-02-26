@@ -93,6 +93,7 @@ module.exports = {
       '40proc': '40%',
       '3/5': '60%',
       '7/10': '0.7rem',
+      '28.7rem': '28.7rem',
     },
     animation: {
       none: 'none',
