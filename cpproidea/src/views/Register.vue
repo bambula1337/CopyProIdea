@@ -1,12 +1,14 @@
 <template>
   <div class="register">
-    <WlcText
-      v-for="(item, index) in WlcTextProps"
-      :key="index"
-      :main="item.main"
-      :sub="item.sub"
-    />
-    <RegForm />
+    <div class="bg">
+      <WlcText
+        v-for="(item, index) in WlcTextProps"
+        :key="index"
+        :main="item.main"
+        :sub="item.sub"
+      />
+      <RegForm />
+    </div>
     <Counter
       v-for="(item, index) in counter"
       :key="index"
@@ -59,5 +61,13 @@ export default {
 
 <style lang="scss" scoped>
 .register {
+  & .bg {
+    @apply bg-no-repeat pb-1 mb-44;
+    background-image: url("../assets/img/bg/bgLeft.png"),
+      url("../assets/img/bg/bgRight.png");
+    background-position: left -1.4rem, right -1.4rem;
+    background-size: 0px;
+    @apply lg:bg-4.5rem;
+  }
 }
 </style>

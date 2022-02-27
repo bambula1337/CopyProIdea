@@ -122,13 +122,21 @@ export default {
         @apply opacity-0 -mr-5 z-30;
 
         & + p::before {
-          @apply inline-block w-4 h-4 rounded-full mr-2;
+          @apply inline-block w-4 h-4 rounded-full mr-2 transition-all duration-500;
           content: " ";
           border: 2px solid rgba(139, 92, 246, var(--tw-border-opacity));
         }
 
         &:checked + p::before {
           @apply bg-purple-500;
+        }
+
+        &:checked:hover +p::before{
+          @apply bg-purple-500;
+        }
+
+        &:hover + p::before{
+          @apply xl:bg-purple-300;
         }
       }
 
@@ -142,6 +150,22 @@ export default {
       @apply lg:h-13 lg:w-60 lg:text-base;
 
       & p {
+        @apply flex items-center flex-col;
+        &::after {
+          content: " ";
+          @apply flex w-0 h-0 bg-blue-200 transition-all duration-700;
+          border: 0px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+        }
+      }
+      &:hover {
+        p {
+          @apply -mb-0.5;
+          &::after {
+            content: " ";
+            @apply flex w-1/4;
+            border: 0.5px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
+          }
+        }
       }
     }
   }
