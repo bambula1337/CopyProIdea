@@ -55,9 +55,12 @@ export default {
 }
 
 .bgimg{
-  @apply bg-no-repeat overflow-hidden -mb-10;
   width: 100%;
-  height: 350px;
+  background-size: 65rem;
+  background-position: top, center;
+  @apply bg-no-repeat overflow-hidden -mb-10 h-52;
+  @apply smlger:h-60;
+  @apply lg:bg-cover lgplus:h-88;
   background-image: url("assets/img/BGHeader.png");
 }
 
