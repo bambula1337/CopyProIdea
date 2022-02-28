@@ -16,7 +16,7 @@
     </div>
     <div class="btnWrapper">
       <div class="ResetPassword">
-        <p>Forget Password</p>
+        <p>Reset Password</p>
       </div>
       <button>
         <p>Login</p>
