@@ -31,11 +31,18 @@
           exact
           >Login</router-link
         >
-        <router-link to="/register" class="sign-up-link" :active-class="'active'"
+        <router-link
+          to="/register"
+          class="sign-up-link"
+          :active-class="'active'"
           ><button>Sign Up</button></router-link
         >
       </div>
-      <div class="mobilemenu" @click="Toggle">
+      <div
+        class="mobilemenu"
+        :class="{ 'lgplus:hidden': !menuIsOpened }"
+        @click="Toggle"
+      >
         <img src="../assets/img/header/MENU.png" alt="" />
       </div>
       <div class="menu">
@@ -88,11 +95,18 @@ export default {
         menu.style.display = "flex";
         document.body.style.overflow = "hidden";
         window.scroll(0, 0);
+        this.menuIsOpened = true;
       } else {
         menu.style.display = "none";
         document.body.style.overflow = "visible";
+        this.menuIsOpened = false;
       }
     },
+  },
+  data() {
+    return {
+      menuIsOpened: false,
+    };
   },
 };
 </script>
@@ -127,8 +141,6 @@ export default {
           @apply flex w-full h-0 bg-blue-200 -mt-1;
           border: 1px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
         }
-
-       
       }
 
       &::after {
@@ -136,8 +148,6 @@ export default {
         @apply flex w-0 h-0 bg-blue-200 -mt-1  transition-all duration-700;
         border: 0px rgba(191, 219, 254, var(--tw-bg-opacity)) solid;
       }
-
-      
     }
     & .login {
       @apply text-gray-50;
@@ -188,7 +198,6 @@ export default {
     }
     & .mobilemenu {
       @apply smlger:ml-24 z-30;
-      @apply lgplus:hidden;
     }
     & .menu {
       @apply bg-gradient-to-r from-blue-300 to-blue-400 absolute left-0 -top-3 z-20 hidden flex-col justify-between overflow-x-auto;
