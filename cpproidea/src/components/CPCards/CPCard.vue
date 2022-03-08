@@ -12,21 +12,9 @@
     </div>
     <hr />
     <div class="FtTxt">
-      <div class="FtWImg">
-        <p class="Features">{{ feature1 }}</p>
-        <img src="@/assets/yes.png" v-if="able1 == true" alt="" />
-      </div>
-      <div class="FtWImg">
-        <p class="Features">{{ feature2 }}</p>
-        <img src="@/assets/yes.png" v-if="able2 == true" alt="" />
-      </div>
-      <div class="FtWImg">
-        <p class="Features">{{ feature3 }}</p>
-        <img src="@/assets/yes.png" v-if="able3 == true" alt="" />
-      </div>
-      <div class="FtWImg">
-        <p class="Features">{{ feature4 }}</p>
-        <img src="@/assets/yes.png" v-if="able4 == true" alt="" />
+      <div class="FtWImg" v-for="(item, index) in abilities" :key="index">
+        <p class="Features">{{ item.text }}</p>
+        <img src="@/assets/yes.png" v-if="item.ability == true" alt="" />
       </div>
     </div>
     <div class="SgUp">
@@ -53,17 +41,10 @@ export default {
     "popular",
     "days",
     "price",
-    "feature1",
-    "feature2",
-    "feature3",
-    "feature4",
     "btn",
     "mback",
-    "able1",
-    "able2",
-    "able3",
-    "able4",
     "bgImg",
+    "abilities"
   ],
   methods: {
     ActiveCard() {
