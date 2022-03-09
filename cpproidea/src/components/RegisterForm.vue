@@ -1,29 +1,11 @@
 <template>
   <div class="register_form">
     <div class="inputs">
-      <div class="inputWrp">
+      <div class="inputWrp" v-for="(item, index) in arrOfInputs" :key="index">
         <div class="pWrp">
-          <p>Email</p>
+          <p>{{item.text}}</p>
         </div>
-        <input type="email" placeholder="mail@example.com" />
-      </div>
-      <div class="inputWrp">
-        <div class="pWrp">
-          <p>Re - Email</p>
-        </div>
-        <input type="email" placeholder="maomail@example.com" />
-      </div>
-      <div class="inputWrp">
-        <div class="pWrp">
-          <p>Password</p>
-        </div>
-        <input type="password" placeholder="•••••••••••" />
-      </div>
-      <div class="inputWrp">
-        <div class="pWrp">
-          <p>Re - Password</p>
-        </div>
-        <input type="password" placeholder="•••••••••••" />
+        <input :type="item.input.type" :placeholder="item.input.placeholder" />
       </div>
     </div>
     <div class="captcha">
@@ -53,6 +35,7 @@
 <script>
 export default {
   name: "RegisterForm",
+  props: ["arrOfInputs"]
 };
 </script>
 
@@ -63,6 +46,8 @@ export default {
   }
   @apply flex items-center flex-col mt-10 mb-10;
   & .inputs {
+    @apply mb-0;
+    @apply md:mb-3;
     & .inputWrp {
       @apply flex justify-between mb-4;
       @apply lg:-ml-28;

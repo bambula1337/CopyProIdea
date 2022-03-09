@@ -7,7 +7,7 @@
         :main="item.main"
         :sub="item.sub"
       />
-      <RegForm />
+      <RegForm :arrOfInputs="registerProps" />
     </div>
     <Counter
       v-for="(item, index) in counter"
@@ -52,6 +52,36 @@ export default {
           datatextcount2: "Зарегистрировано пользователей",
           dataicon: "download.png",
           dataicon2: "adduser.png",
+        },
+      ],
+      registerProps: [
+        {
+          text: "Email",
+          input: {
+            type: "email",
+            placeholder: "mail@example.com",
+          },
+        },
+        {
+          text: "Re - Email",
+          input: {
+            type: "email",
+            placeholder: "maomail@example.com",
+          },
+        },
+        {
+          text: "Password",
+          input: {
+            type: "password",
+            placeholder: "•••••••••••",
+          },
+        },
+        {
+          text: "Re - Passwoed",
+          input: {
+            type: "password",
+            placeholder: "•••••••••••",
+          },
         },
       ],
     };
