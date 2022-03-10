@@ -1,17 +1,11 @@
 <template>
   <div class="login_form">
     <div class="inputs">
-      <div class="inputWrp">
+      <div class="inputWrp" v-for="(item, index) in inputsProps" :key="index">
         <div class="pWrp">
-          <p>Email</p>
+          <p>{{item.text}}</p>
         </div>
-        <input type="email" placeholder="mail@example.com" />
-      </div>
-      <div class="inputWrp">
-        <div class="pWrp">
-          <p>Password</p>
-        </div>
-        <input type="password" placeholder="•••••••••••" />
+        <input :type="item.input.type" :placeholder="item.input.placeholder" />
       </div>
     </div>
     <div class="btnWrapper">
@@ -28,6 +22,7 @@
 <script>
 export default {
   name: "LoginForm",
+  props: ["inputsProps"]
 };
 </script>
 

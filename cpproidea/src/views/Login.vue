@@ -7,7 +7,7 @@
         :main="item.main"
         :sub="item.sub"
       />
-      <LogForm />
+      <LogForm :inputsProps="loginProps.forInputs" />
     </div>
     <Counter
       v-for="(item, index) in counter"
@@ -54,6 +54,24 @@ export default {
           dataicon2: "adduser.png",
         },
       ],
+      loginProps: {
+        forInputs: [
+          {
+            text: "Email",
+            input: {
+              type: "email",
+              placeholder: "mail@example.com",
+            },
+          },
+          {
+            text: "Password",
+            input: {
+              type: "password",
+              placeholder: "•••••••••••",
+            },
+          },
+        ],
+      },
     };
   },
 };
