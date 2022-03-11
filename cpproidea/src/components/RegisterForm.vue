@@ -5,7 +5,7 @@
         <div class="pWrp">
           <p>{{ item.text }}</p>
         </div>
-        <input :type="item.input.type" :placeholder="item.input.placeholder" />
+        <input :type="item.input.type" :placeholder="placeholderChanger" />
       </div>
     </div>
     <div class="captcha">
@@ -38,11 +38,17 @@ export default {
   props: ["arrOfInputs"],
   data(){
     return{
-      width: window.innerWidth,
+      widthProp: window.innerWidth,
     }
   },
-  computed(){
-    placeholderChanger: function()
+  computed: {
+    placeholderChanger: function(pcPlaceholder, mobilePlaceholder){
+      if(this.widthProp > 1000){
+        return pcPlaceholder
+      } else{
+        return mobilePlaceholder
+      }
+    }
   },
   created() {
     window.addEventListener("resize", () => {
