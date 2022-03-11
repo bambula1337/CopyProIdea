@@ -3,7 +3,7 @@
     <div class="inputs">
       <div class="inputWrp" v-for="(item, index) in arrOfInputs" :key="index">
         <div class="pWrp">
-          <p>{{item.text}}</p>
+          <p>{{ item.text }}</p>
         </div>
         <input :type="item.input.type" :placeholder="item.input.placeholder" />
       </div>
@@ -35,7 +35,20 @@
 <script>
 export default {
   name: "RegisterForm",
-  props: ["arrOfInputs"]
+  props: ["arrOfInputs"],
+  data(){
+    return{
+      width: window.innerWidth,
+    }
+  },
+  computed(){
+    placeholderChanger: function()
+  },
+  created() {
+    window.addEventListener("resize", () => {
+      this.widthProp = window.innerWidth;
+    });
+  },
 };
 </script>
 
@@ -116,11 +129,11 @@ export default {
           @apply bg-purple-500;
         }
 
-        &:checked:hover +p::before{
+        &:checked:hover + p::before {
           @apply bg-purple-500;
         }
 
-        &:hover + p::before{
+        &:hover + p::before {
           @apply xl:bg-purple-300;
         }
       }
