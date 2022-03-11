@@ -77,7 +77,7 @@ export default {
           },
         },
         {
-          text: "Re - Passwoed",
+          text: "Re - Password",
           input: {
             type: "password",
             placeholder: "•••••••••••",

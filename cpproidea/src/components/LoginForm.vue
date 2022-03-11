@@ -5,7 +5,7 @@
         <div class="pWrp">
           <p>{{item.text}}</p>
         </div>
-        <input :type="item.input.type" :placeholder="item.input.placeholder" />
+        <input :type="item.input.type" :placeholder="placeholderChanger(item.input.placeholder, item.text, 768)" />
       </div>
     </div>
     <div class="btnWrapper">
@@ -22,7 +22,26 @@
 <script>
 export default {
   name: "LoginForm",
-  props: ["inputsProps"]
+  props: ["inputsProps"],
+  data() {
+    return {
+      widthProp: window.innerWidth,
+    };
+  },
+  methods: {
+    placeholderChanger: function (pcPlaceholder, mobilePlaceholder, number) {
+      if (this.widthProp >= number) {
+        return pcPlaceholder;
+      } else {
+        return mobilePlaceholder;
+      }
+    },
+  },
+  created() {
+    window.addEventListener("resize", () => {
+      this.widthProp = window.innerWidth;
+    });
+  },
 };
 </script>
 

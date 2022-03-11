@@ -5,7 +5,7 @@
         <div class="pWrp">
           <p>{{ item.text }}</p>
         </div>
-        <input :type="item.input.type" :placeholder="placeholderChanger" />
+        <input :type="item.input.type" :placeholder="placeholderChanger(item.input.placeholder, item.text, 1024)" />
       </div>
     </div>
     <div class="captcha">
@@ -36,19 +36,19 @@
 export default {
   name: "RegisterForm",
   props: ["arrOfInputs"],
-  data(){
-    return{
+  data() {
+    return {
       widthProp: window.innerWidth,
-    }
+    };
   },
-  computed: {
-    placeholderChanger: function(pcPlaceholder, mobilePlaceholder){
-      if(this.widthProp > 1000){
-        return pcPlaceholder
-      } else{
-        return mobilePlaceholder
+  methods: {
+    placeholderChanger: function (pcPlaceholder, mobilePlaceholder, number) {
+      if (this.widthProp >= number) {
+        return pcPlaceholder;
+      } else {
+        return mobilePlaceholder;
       }
-    }
+    },
   },
   created() {
     window.addEventListener("resize", () => {
