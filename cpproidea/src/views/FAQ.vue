@@ -7,7 +7,7 @@
         :main="item.main"
         :sub="item.sub"
       />
-      <FAQComponent />
+      <FAQComponent :cardProps="faqProps.cards"/>
     </div>
     <CPCounter
       v-for="(item, index) in counter"
@@ -54,6 +54,42 @@ export default {
           sub: "Online Storage",
         },
       ],
+      faqProps: {
+        cards: [
+          {
+            text: 'How to install?',
+            subtext: 'Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue tincidunt integer. Sed gravida in cursus pellentesque odio.'
+          },
+          {
+            text: 'How to install?',
+            subtext: 'Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue tincidunt integer. Sed gravida in cursus pellentesque odio.'
+          },
+          {
+            text: 'How to install?',
+            subtext: 'Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue tincidunt integer. Sed gravida in cursus pellentesque odio.'
+          },
+          {
+            text: 'How to install?',
+            subtext: 'Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue tincidunt integer. Sed gravida in cursus pellentesque odio.'
+          },
+          {
+            text: 'How to install?',
+            subtext: 'Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue tincidunt integer. Sed gravida in cursus pellentesque odio.'
+          },
+          {
+            text: 'How to install?',
+            subtext: 'Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue tincidunt integer. Sed gravida in cursus pellentesque odio.'
+          },
+          {
+            text: 'How to install?',
+            subtext: 'Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue tincidunt integer. Sed gravida in cursus pellentesque odio.'
+          },
+          {
+            text: 'How to install?',
+            subtext: 'Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue tincidunt integer. Sed gravida in cursus pellentesque odio.'
+          },
+        ]
+      }
     };
   },
 };

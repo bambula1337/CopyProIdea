@@ -1,147 +1,17 @@
 <template>
   <div class="faq">
-    <details>
+    <details v-for="(item, index) in cardProps" :key="index">
       <summary>
-        <p>How to install?</p>
+        <p>
+          {{ item.text }}
+        </p>
         <div class="svg">
           <img src="@/assets/img/FAQ/Close.png" class="closeimg" alt="" />
           <img src="@/assets/img/FAQ/Open.png" class="openimg" alt="" />
         </div>
       </summary>
       <p class="subtext">
-        Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget
-        sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis
-        tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin
-        purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu
-        vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus
-        libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue
-        tincidunt integer. Sed gravida in cursus pellentesque odio.
-      </p>
-    </details>
-    <details>
-      <summary>
-        <p>How to install?</p>
-        <div class="svg">
-          <img src="@/assets/img/FAQ/Close.png" class="closeimg" alt="" />
-          <img src="@/assets/img/FAQ/Open.png" class="openimg" alt="" />
-        </div>
-      </summary>
-      <p>
-        Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget
-        sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis
-        tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin
-        purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu
-        vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus
-        libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue
-        tincidunt integer. Sed gravida in cursus pellentesque odio.
-      </p>
-    </details>
-    <details>
-      <summary>
-        <p>How to install?</p>
-        <div class="svg">
-          <img src="@/assets/img/FAQ/Close.png" class="closeimg" alt="" />
-          <img src="@/assets/img/FAQ/Open.png" class="openimg" alt="" />
-        </div>
-      </summary>
-      <p>
-        Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget
-        sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis
-        tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin
-        purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu
-        vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus
-        libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue
-        tincidunt integer. Sed gravida in cursus pellentesque odio.
-      </p>
-    </details>
-    <details>
-      <summary>
-        <p>How to install?</p>
-        <div class="svg">
-          <img src="@/assets/img/FAQ/Close.png" class="closeimg" alt="" />
-          <img src="@/assets/img/FAQ/Open.png" class="openimg" alt="" />
-        </div>
-      </summary>
-      <p>
-        Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget
-        sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis
-        tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin
-        purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu
-        vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus
-        libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue
-        tincidunt integer. Sed gravida in cursus pellentesque odio.
-      </p>
-    </details>
-    <details>
-      <summary>
-        <p>How to install?</p>
-        <div class="svg">
-          <img src="@/assets/img/FAQ/Close.png" class="closeimg" alt="" />
-          <img src="@/assets/img/FAQ/Open.png" class="openimg" alt="" />
-        </div>
-      </summary>
-      <p>
-        Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget
-        sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis
-        tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin
-        purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu
-        vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus
-        libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue
-        tincidunt integer. Sed gravida in cursus pellentesque odio.
-      </p>
-    </details>
-    <details>
-      <summary>
-        <p>How to install?</p>
-        <div class="svg">
-          <img src="@/assets/img/FAQ/Close.png" class="closeimg" alt="" />
-          <img src="@/assets/img/FAQ/Open.png" class="openimg" alt="" />
-        </div>
-      </summary>
-      <p>
-        Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget
-        sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis
-        tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin
-        purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu
-        vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus
-        libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue
-        tincidunt integer. Sed gravida in cursus pellentesque odio.
-      </p>
-    </details>
-    <details>
-      <summary>
-        <p>How to install?</p>
-        <div class="svg">
-          <img src="@/assets/img/FAQ/Close.png" class="closeimg" alt="" />
-          <img src="@/assets/img/FAQ/Open.png" class="openimg" alt="" />
-        </div>
-      </summary>
-      <p>
-        Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget
-        sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis
-        tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin
-        purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu
-        vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus
-        libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue
-        tincidunt integer. Sed gravida in cursus pellentesque odio.
-      </p>
-    </details>
-    <details>
-      <summary>
-        <p>How to install?</p>
-        <div class="svg">
-          <img src="@/assets/img/FAQ/Close.png" class="closeimg" alt="" />
-          <img src="@/assets/img/FAQ/Open.png" class="openimg" alt="" />
-        </div>
-      </summary>
-      <p>
-        Orci nibh faucibus nunc aliquet diam. Neque quis dignissim ipsum eget
-        sed massa feugiat sit nibh. Pretium eget morbi tincidunt justo, mattis
-        tincidunt facilisis lorem. Commodo, sit enim, amet fringilla in proin
-        purus. Et odio arcu libero at sed quam tempor, neque. Scelerisque arcu
-        vel vehicula eget posuere. Sed urna velit aliquam in pharetra. Tempus
-        libero elit ac hac et morbi. Sed viverra vel adipiscing mauris, congue
-        tincidunt integer. Sed gravida in cursus pellentesque odio.
+        {{ item.subtext }}
       </p>
     </details>
   </div>
@@ -150,12 +20,15 @@
 <script>
 export default {
   name: "FAQ",
+  props: ["cardProps"],
 };
 </script>
 
 <style lang="scss" scoped>
 .faq {
   @apply flex flex-col text-purple-900 items-center mt-20 mb-40;
+  min-height: 28rem;
+  max-height: 37rem;
   & details {
     @apply text-left mb-5 w-72;
     @apply smlger:w-98;
@@ -207,7 +80,5 @@ export default {
       }
     }
   }
-
 }
-
 </style>
