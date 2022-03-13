@@ -1,7 +1,12 @@
 <template>
   <div class="faq">
-    <details v-for="(item, index) in cardProps" :key="index">
-      <summary>
+    <details
+      v-for="(item, index) in cardProps"
+      :key="index"
+      id="FAQCard"
+      :data-id="index"
+    >
+      <summary @click.prevent="opener">
         <p>
           {{ item.text }}
         </p>
@@ -21,14 +26,30 @@
 export default {
   name: "FAQ",
   props: ["cardProps"],
+  methods: {
+    opener: function (event) {
+      this.openThisCard = event.target.closest("#FAQCard");
+
+      if (this.openThisCard.open) {
+        this.openThisCard.open = false;
+      }
+      else {
+        document.querySelectorAll("#FAQCard").forEach((el) => {
+          el.open = false;
+        });
+        this.openThisCard.open = true;
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .faq {
+  max-height: 47rem;
   @apply flex flex-col text-purple-900 items-center mt-20 mb-40;
+  @apply lg:max-h-143;
   min-height: 28rem;
-  max-height: 37rem;
   & details {
     @apply text-left mb-5 w-72;
     @apply smlger:w-98;
