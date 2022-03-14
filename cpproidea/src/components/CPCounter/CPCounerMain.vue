@@ -1,14 +1,14 @@
 <template>
   <div class="allcount">
     <div class="left">
-      <div class="img"><img :src="require(`../../assets/img/countUsersIcons/${icon}`)" alt=""></div>
+      <div class="img"><img src="../../assets/img/countUsersIcons/download.png" alt=""></div>
       <div class="lefttext">
         <p class="count">{{count}}</p>
         <p class="textcount">{{textcount}}</p>
       </div>
     </div>
     <div class="right">
-      <div class="img"><img :src="require(`../../assets/img/countUsersIcons/${icon2}`)"  alt=""></div>
+      <div class="img"><img src="../../assets/img/countUsersIcons/adduser.png"  alt=""></div>
       <div class="righttext">
         <p class="count2">{{count2}}</p>
         <p class="textcount2 sm:w-52 lgplus:w-96">{{textcount2}}</p>
@@ -20,7 +20,14 @@
 <script>
 export default {
   name: "CPCounterParent",
-  props: ["count", "textcount", "count2", "textcount2", "icon", "icon2"],
+  data(){
+    return{
+      count: '999529 000 000',
+      textcount: 'Загружено файлов на сервис',
+      count2: '235 764 784',
+      textcount2: 'Зарегистрировано пользователей',
+    }
+  }
 }
 </script>
 
