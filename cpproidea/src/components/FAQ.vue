@@ -32,8 +32,7 @@ export default {
 
       if (this.openThisCard.open) {
         this.openThisCard.open = false;
-      }
-      else {
+      } else {
         document.querySelectorAll("#FAQCard").forEach((el) => {
           el.open = false;
         });
@@ -64,6 +63,11 @@ export default {
 
     &[open] summary {
       @apply from-blue-300 to-purple-300;
+    }
+
+    &[open] .subtext {
+      animation-duration: 0.7s;
+      animation-name: openingAnim;
     }
 
     & p {
@@ -100,6 +104,16 @@ export default {
         }
       }
     }
+  }
+}
+
+@keyframes openingAnim {
+  from {
+    @apply -mt-5 mb-0;
+  }
+
+  to {
+    @apply mt-5 mb-5;
   }
 }
 </style>
