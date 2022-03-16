@@ -113,7 +113,7 @@ export default {
   }
 
   to {
-    @apply mt-5 mb-5;
+    @apply mt-5 mb-7;
   }
 }
 </style>

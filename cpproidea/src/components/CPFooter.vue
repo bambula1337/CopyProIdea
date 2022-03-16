@@ -30,7 +30,7 @@
         <router-link to="/privacy" class="link" :active-class="'active'"
           >Privacy Policy</router-link
         >
-        <router-link to="/terms" class="link" :active-class="'active'"
+        <router-link to="/textpage" class="link" :active-class="'active'"
           >Terms of Service</router-link
         >
       </div>

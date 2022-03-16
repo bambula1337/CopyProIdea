@@ -37,6 +37,11 @@ const routes: Array<RouteConfig> = [
     name: "Login",
     component: () => import("@/views/Login.vue"),
   },
+  {
+    path:"/textpage",
+    name: "TextPage",
+    component: () => import("@/views/TextPage.vue"),
+  },
 ];
 
 const router = new VueRouter({
