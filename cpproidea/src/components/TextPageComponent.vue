@@ -62,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 .TextPageComponentWrapper {
   @apply flex flex-col mt-12 px-4;
-  @apply lg:px-17proc;
+  @apply lg:px-17/100;
 
   & .top {
     & .header {
