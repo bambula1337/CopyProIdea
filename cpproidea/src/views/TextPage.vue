@@ -39,7 +39,7 @@ export default {
       url("../assets/img/bg/bgRight.png");
     background-position: left -1.4rem, right -1.4rem;
     background-size: 0px;
-    @apply lgplus:bg-4.5rem;
+    @apply lg:bg-4.5rem;
   }
 }
 </style>

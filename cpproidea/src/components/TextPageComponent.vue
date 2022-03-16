@@ -2,7 +2,11 @@
   <div class="TextPageComponentWrapper">
     <div class="top">
       <p class="header">{{ TextPage.Top.Header }}</p>
-      <p class="subtext" v-for="(item, index) in TextPage.Top.Text" :key="index">
+      <p
+        class="subtext"
+        v-for="(item, index) in TextPage.Top.Text"
+        :key="index"
+      >
         {{ item.text }}
       </p>
     </div>
@@ -57,21 +61,21 @@ export default {
 
 <style lang="scss" scoped>
 .TextPageComponentWrapper {
-  @apply flex flex-col mt-12;
-  padding-left: 17%;
-  padding-right: 17%;
+  @apply flex flex-col mt-12 px-4;
+  @apply lg:px-17proc;
 
   & .top {
     & .header {
-      @apply text-3xl -ml-4 pb-0 uppercase mb-2.5;
+      @apply text-3xl -ml-1 pb-0 uppercase mb-2.5;
+      @apply lg:-ml-4;
       color: rgba(59, 102, 141, 1);
     }
     & .subtext {
       @apply pb-5 text-gray-500 text-base;
       word-spacing: 0.5px;
-      letter-spacing: .35px; 
+      letter-spacing: 0.35px;
 
-      &:last-child{
+      &:last-child {
         @apply mb-2;
       }
     }
@@ -79,19 +83,26 @@ export default {
 
   & .bottom {
     & .header {
-      @apply text-3xl -ml-4 pb-0 uppercase mb-2.5;
+      @apply text-3xl -ml-1 pb-0 uppercase mb-2.5;
+      @apply lg:-ml-4;
       color: rgba(59, 102, 141, 1);
     }
     & .subtext {
       @apply pb-5 text-gray-500 text-base;
       word-spacing: 0.5px;
-      letter-spacing: .35px; 
+      letter-spacing: 0.35px;
     }
 
     & .middle {
       @apply flex my-1.5;
       & p {
-        @apply mr-7;
+        @apply mr-0;
+        @apply lg:mr-7;
+
+        &:last-child {
+          @apply ml-4;
+          @apply lg:ml-0;
+        }
       }
     }
   }
