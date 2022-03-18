@@ -39,7 +39,9 @@
         >
       </div>
       <div class="mobilemenu" :class="{ 'lgplus:hidden': !menuIsOpened }">
-        <span></span>
+        <div class="iconwrapper">
+          <span class="icon"></span>
+        </div>
         <input type="checkbox" @click="toggle" />
       </div>
       <div class="menu">
@@ -88,12 +90,21 @@ export default {
     toggle: function (event) {
       this.menuIsOpened = !this.menuIsOpened;
       this.menu = document.querySelector(".menu");
+      this.iconEl = document.querySelector(".iconwrapper");
+      this.iconElchild = this.iconEl.querySelector("span");
       if (this.menuIsOpened) {
-        event.target.classList.add('isOpened');
+        event.target.classList.add("isOpened");
+        this.iconEl.classList.add("isOpenedForicon");
+        this.iconElchild.classList.remove("icon");
+        this.iconElchild.classList.add("iconOpened");
+        console.dir(this.iconEl.querySelector(".icon"));
         this.menu.style.left = "50%";
       } else {
         this.menu.style.left = "100%";
-        event.target.classList.remove('isOpened');
+        event.target.classList.remove("isOpened");
+        this.iconEl.classList.remove("isOpenedForicon");
+        this.iconElchild.classList.remove("iconOpened");
+        this.iconElchild.classList.add("icon");
       }
     },
   },
@@ -191,9 +202,47 @@ export default {
       }
     }
     & .mobilemenu {
-      @apply smlger:ml-24 z-30;
+      @apply smlger:ml-24 z-30 absolute top-0.5;
+      left: 70%;
       & input {
-        @apply relative opacity-10;
+        @apply relative opacity-0 w-8 h-7 mt-4;
+
+        &:checked {
+          @apply mt-4;
+        }
+      }
+
+      & .iconwrapper {
+        @apply absolute top-8;
+      }
+
+      & .icon {
+        content: "";
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 85%;
+        width: 2rem;
+        border-bottom: 2px solid rgb(255, 255, 255);
+        transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          width: 2rem;
+          border-bottom: 2px solid rgb(255, 255, 255);
+          transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        &::after {
+          transform: translateY(-8px);
+        }
+
+        &::before {
+          transform: translateY(8px);
+        }
       }
     }
     & .menu {
@@ -236,7 +285,44 @@ export default {
   }
 }
 
-.isOpened{
+.isOpened {
   position: fixed !important;
+}
+
+.isOpenedForicon {
+  margin-top: 0.9rem;
+  position: fixed !important;
+}
+
+.iconOpened {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 85%;
+  width: 2rem;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  width: 0rem;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 2rem;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  &::after {
+    transform: translateY(-8px);
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: translateY(8px);
+    transform: rotate(-45deg);
+  }
 }
 </style>
