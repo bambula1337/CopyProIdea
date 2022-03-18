@@ -38,12 +38,9 @@
           ><button>Sign Up</button></router-link
         >
       </div>
-      <div
-        class="mobilemenu"
-        :class="{ 'lgplus:hidden': !menuIsOpened }"
-        @click="Toggle"
-      >
-        <img src="../assets/img/header/MENU.png" alt="" />
+      <div class="mobilemenu" :class="{ 'lgplus:hidden': !menuIsOpened }">
+        <span></span>
+        <input type="checkbox" @click="toggle" />
       </div>
       <div class="menu">
         <div class="linksmobile">
@@ -88,18 +85,15 @@
 export default {
   name: "CPHeader",
   methods: {
-    Toggle: function () {
-      const menu = document.querySelector(".menu");
-
-      if (menu.style.display == "none") {
-        menu.style.display = "flex";
-        document.body.style.overflow = "hidden";
-        window.scroll(0, 0);
-        this.menuIsOpened = true;
+    toggle: function (event) {
+      this.menuIsOpened = !this.menuIsOpened;
+      this.menu = document.querySelector(".menu");
+      if (this.menuIsOpened) {
+        event.target.classList.add('isOpened');
+        this.menu.style.left = "50%";
       } else {
-        menu.style.display = "none";
-        document.body.style.overflow = "visible";
-        this.menuIsOpened = false;
+        this.menu.style.left = "100%";
+        event.target.classList.remove('isOpened');
       }
     },
   },
@@ -198,19 +192,20 @@ export default {
     }
     & .mobilemenu {
       @apply smlger:ml-24 z-30;
+      & input {
+        @apply relative opacity-10;
+      }
     }
     & .menu {
-      @apply bg-gradient-to-r from-blue-300 to-blue-400 absolute left-0 -top-3 z-20 hidden flex-col justify-between overflow-x-auto;
+      @apply bg-gradient-to-r from-blue-300 to-blue-400 fixed left-full -top-0 z-20 flex-col justify-between overflow-x-auto rounded-l-3xl transition-all duration-700;
       @apply lgplus:hidden;
-      width: 100vw;
+      width: 50vw;
       height: 100vh;
 
       & .linksmobile {
-        @apply flex w-full flex-col items-center self-center pt-3/5;
-        @apply smlger:pt-40proc;
+        @apply flex w-full flex-col items-center self-center mb-16 mt-44;
         & .linkmobile {
           @apply text-blue-50 text-3xl mb-10 transition-all duration-300;
-          @apply md:text-5xl md:mb-20;
           &.mobileactive {
             @apply text-blue-200 underline;
           }
@@ -221,7 +216,7 @@ export default {
         @apply flex w-full flex-col items-center;
         & .loginmobile {
           @apply text-3xl text-purple-100 mb-10 transition-all duration-500;
-          @apply md:text-5xl;
+          @apply md:text-4xl;
 
           &.active {
             @apply text-blue-100 underline;
@@ -229,8 +224,8 @@ export default {
         }
 
         & .btnmobile {
-          @apply text-3xl text-blue-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex mb-10proc;
-          @apply md:text-5xl md:w-60 md:h-20 transition-all duration-300;
+          @apply text-2xl text-blue-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex mb-10proc;
+          @apply md:text-3xl md:w-44 md:h-14 transition-all duration-300;
 
           &.active {
             @apply bg-blue-400 text-blue-50;
@@ -239,5 +234,9 @@ export default {
       }
     }
   }
+}
+
+.isOpened{
+  position: fixed !important;
 }
 </style>
