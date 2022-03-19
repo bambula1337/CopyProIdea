@@ -38,11 +38,11 @@
           ><button>Sign Up</button></router-link
         >
       </div>
-      <div class="mobilemenu" :class="{ 'lgplus:hidden': !menuIsOpened }">
+      <div class="mobilemenu" @click="toggle" :class="{ 'lgplus:hidden': !menuIsOpened }">
         <div class="iconwrapper">
           <span class="icon"></span>
         </div>
-        <input type="checkbox" @click="toggle" />
+        <input type="checkbox" />
       </div>
       <div class="menu">
         <div class="linksmobile">
@@ -92,19 +92,22 @@ export default {
       this.menu = document.querySelector(".menu");
       this.iconEl = document.querySelector(".iconwrapper");
       this.iconElchild = this.iconEl.querySelector("span");
+      this.mobilemenu = document.querySelector(".mobilemenu");
+      this.input = this.mobilemenu.querySelector("input");
       if (this.menuIsOpened) {
         event.target.classList.add("isOpened");
         this.iconEl.classList.add("isOpenedForicon");
         this.iconElchild.classList.remove("icon");
         this.iconElchild.classList.add("iconOpened");
-        console.dir(this.iconEl.querySelector(".icon"));
-        this.menu.style.left = "50%";
+        this.menu.style.right = "0%";
+        this.input.classList.add('inputOpened');
       } else {
-        this.menu.style.left = "100%";
+        this.menu.style.right = "-70%";
         event.target.classList.remove("isOpened");
         this.iconEl.classList.remove("isOpenedForicon");
         this.iconElchild.classList.remove("iconOpened");
         this.iconElchild.classList.add("icon");
+        this.input.classList.remove('inputOpened');
       }
     },
   },
@@ -203,9 +206,9 @@ export default {
     }
     & .mobilemenu {
       @apply smlger:ml-24 z-30 absolute top-0.5;
-      left: 70%;
+      right: 10%;
       & input {
-        @apply relative opacity-0 w-8 h-7 mt-4;
+        @apply relative opacity-0 w-8 h-7 mt-4 -ml-8;
 
         &:checked {
           @apply mt-4;
@@ -220,7 +223,7 @@ export default {
         content: "";
         position: absolute;
         top: calc(50% - 1px);
-        left: 85%;
+        right: 0%;
         width: 2rem;
         border-bottom: 2px solid rgb(255, 255, 255);
         transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -246,15 +249,18 @@ export default {
       }
     }
     & .menu {
-      @apply bg-gradient-to-r from-blue-300 to-blue-400 fixed left-full -top-0 z-20 flex-col justify-between overflow-x-auto rounded-l-3xl transition-all duration-700;
+      @apply bg-gradient-to-r from-blue-300 to-blue-400 fixed -top-0 z-20 flex-col justify-between overflow-x-auto rounded-l-3xl transition-all duration-700 w-44;
+      @apply smplus:w-52;
       @apply lgplus:hidden;
-      width: 50vw;
       height: 100vh;
+      right: -70%;
 
       & .linksmobile {
         @apply flex w-full flex-col items-center self-center mb-16 mt-44;
+        @apply smplus:mt-38 mb-10;
         & .linkmobile {
-          @apply text-blue-50 text-3xl mb-10 transition-all duration-300;
+          @apply text-blue-50 text-2xl mb-10 transition-all duration-300;
+          @apply smplus:text-3xl;
           &.mobileactive {
             @apply text-blue-200 underline;
           }
@@ -264,8 +270,8 @@ export default {
       & .btnsmobile {
         @apply flex w-full flex-col items-center;
         & .loginmobile {
-          @apply text-3xl text-purple-100 mb-10 transition-all duration-500;
-          @apply md:text-4xl;
+          @apply text-2xl text-purple-100 mb-3 transition-all duration-500;
+          @apply smplus:text-3xl;
 
           &.active {
             @apply text-blue-100 underline;
@@ -273,8 +279,8 @@ export default {
         }
 
         & .btnmobile {
-          @apply text-2xl text-blue-400 bg-blue-50 rounded-full w-40 text-center h-14 justify-center flex mb-10proc;
-          @apply md:text-3xl md:w-44 md:h-14 transition-all duration-300;
+          @apply text-2xl text-blue-400 bg-blue-50 rounded-full w-32 text-center h-10 justify-center flex mb-10proc;
+          @apply smplus:text-3xl smplus:w-44 smplus:h-14 transition-all duration-300;
 
           &.active {
             @apply bg-blue-400 text-blue-50;
@@ -286,19 +292,22 @@ export default {
 }
 
 .isOpened {
+  @apply right-4;
   position: fixed !important;
 }
 
 .isOpenedForicon {
+  @apply right-12;
   margin-top: 0.9rem;
   position: fixed !important;
 }
 
 .iconOpened {
+  @apply lgplus:hidden;
   content: "";
   position: absolute;
   top: calc(50% - 1px);
-  left: 85%;
+  right: 0%;
   width: 2rem;
   border-bottom: 2px solid rgb(255, 255, 255);
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -324,5 +333,9 @@ export default {
     transform: translateY(8px);
     transform: rotate(-45deg);
   }
+}
+
+.inputOpened{
+margin-left: -1rem !important;
 }
 </style>
