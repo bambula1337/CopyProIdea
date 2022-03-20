@@ -102,7 +102,7 @@ export default {
         this.menu.style.right = "0%";
         this.input.classList.add('inputOpened');
       } else {
-        this.menu.style.right = "-70%";
+        this.menu.style.right = "-55%";
         event.target.classList.remove("isOpened");
         this.iconEl.classList.remove("isOpenedForicon");
         this.iconElchild.classList.remove("iconOpened");
@@ -249,15 +249,15 @@ export default {
       }
     }
     & .menu {
-      @apply bg-gradient-to-r from-blue-300 to-blue-400 fixed -top-0 z-20 flex-col justify-between overflow-x-auto rounded-l-3xl transition-all duration-700 w-44;
+      @apply bg-gradient-to-r from-blue-300 to-blue-400 fixed -top-0 z-20 flex-col flex justify-between overflow-x-auto rounded-l-3xl transition-all duration-700 w-44;
       @apply smplus:w-52;
       @apply lgplus:hidden;
       height: 100vh;
-      right: -70%;
+      right: -55%;
 
       & .linksmobile {
-        @apply flex w-full flex-col items-center self-center mb-16 mt-44;
-        @apply smplus:mt-38 mb-10;
+        @apply flex w-full flex-col items-center mt-56;
+        @apply smplus:mt-36;
         & .linkmobile {
           @apply text-blue-50 text-2xl mb-10 transition-all duration-300;
           @apply smplus:text-3xl;
@@ -279,7 +279,7 @@ export default {
         }
 
         & .btnmobile {
-          @apply text-2xl text-blue-400 bg-blue-50 rounded-full w-32 text-center h-10 justify-center flex mb-10proc;
+          @apply text-2xl text-blue-400 bg-blue-50 rounded-full w-32 text-center h-10 justify-center flex mb-8;
           @apply smplus:text-3xl smplus:w-44 smplus:h-14 transition-all duration-300;
 
           &.active {
