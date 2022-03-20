@@ -253,7 +253,7 @@ export default {
       }
     }
     & .menu {
-      @apply bg-gradient-to-r from-blue-300 to-blue-400 fixed -top-0 z-20 flex-col flex justify-between overflow-x-auto rounded-l-3xl transition-all duration-700 w-44;
+      @apply bg-gradient-to-r from-purple-400 to-purple-400 fixed -top-0 z-20 flex-col flex justify-between overflow-x-auto rounded-l-3xl transition-all duration-700 w-44;
       @apply smplus:w-52;
       @apply lgplus:hidden;
       height: 100vh;
@@ -269,10 +269,10 @@ export default {
             @apply w-0 transition-all;
             transition-duration: 800ms;
             content: "";
-            border-bottom: 3px rgba(191, 219, 254, var(--tw-text-opacity)) solid;
+            border-bottom: 3px rgba(139, 92, 246, var(--tw-text-opacity)) solid;
           }
           &.mobileactive {
-            @apply text-blue-100;
+            @apply text-purple-500;
 
             &:after {
               @apply w-full;
@@ -290,10 +290,10 @@ export default {
             @apply w-0 transition-all;
             transition-duration: 800ms;
             content: "";
-            border-bottom: 3px rgba(191, 219, 254, var(--tw-text-opacity)) solid;
+            border-bottom: 3px rgba(139, 92, 246, var(--tw-text-opacity)) solid;
           }
           &.active {
-            @apply text-purple-100;
+            @apply text-purple-500;
             &:after {
               @apply w-full;
             }
@@ -301,11 +301,11 @@ export default {
         }
 
         & .btnmobile {
-          @apply text-2xl text-blue-400 bg-blue-50 rounded-full w-32 text-center h-10 justify-center flex mb-8;
+          @apply text-2xl text-purple-500 bg-blue-50 rounded-full w-32 text-center h-10 justify-center flex mb-8;
           @apply smplus:text-3xl smplus:w-44 smplus:h-14 transition-all duration-700;
 
           &.active {
-            @apply bg-blue-400 text-blue-50;
+            @apply bg-purple-500 text-blue-50;
           }
         }
       }
