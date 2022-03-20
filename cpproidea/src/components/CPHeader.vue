@@ -38,7 +38,11 @@
           ><button>Sign Up</button></router-link
         >
       </div>
-      <div class="mobilemenu" @click="toggle" :class="{ 'lgplus:hidden': !menuIsOpened }">
+      <div
+        class="mobilemenu"
+        @click="toggle"
+        :class="{ 'lgplus:hidden': !menuIsOpened }"
+      >
         <div class="iconwrapper">
           <span class="icon"></span>
         </div>
@@ -100,14 +104,14 @@ export default {
         this.iconElchild.classList.remove("icon");
         this.iconElchild.classList.add("iconOpened");
         this.menu.style.right = "0%";
-        this.input.classList.add('inputOpened');
+        this.input.classList.add("inputOpened");
       } else {
         this.menu.style.right = "-55%";
         event.target.classList.remove("isOpened");
         this.iconEl.classList.remove("isOpenedForicon");
         this.iconElchild.classList.remove("iconOpened");
         this.iconElchild.classList.add("icon");
-        this.input.classList.remove('inputOpened');
+        this.input.classList.remove("inputOpened");
       }
     },
   },
@@ -259,10 +263,20 @@ export default {
         @apply flex w-full flex-col items-center mt-56;
         @apply smplus:mt-36;
         & .linkmobile {
-          @apply text-blue-50 text-2xl mb-10 transition-all duration-300;
+          @apply text-blue-50 text-2xl mb-10 transition-all duration-700 flex flex-col items-center;
           @apply smplus:text-3xl;
+          &:after {
+            @apply w-0 transition-all;
+            transition-duration: 800ms;
+            content: "";
+            border-bottom: 3px rgba(191, 219, 254, var(--tw-text-opacity)) solid;
+          }
           &.mobileactive {
-            @apply text-blue-200 underline;
+            @apply text-blue-100;
+
+            &:after {
+              @apply w-full;
+            }
           }
         }
       }
@@ -270,17 +284,25 @@ export default {
       & .btnsmobile {
         @apply flex w-full flex-col items-center;
         & .loginmobile {
-          @apply text-2xl text-purple-100 mb-3 transition-all duration-500;
+          @apply text-2xl text-purple-100 mb-3 transition-all duration-700 flex flex-col items-center;
           @apply smplus:text-3xl;
-
+          &:after {
+            @apply w-0 transition-all;
+            transition-duration: 800ms;
+            content: "";
+            border-bottom: 3px rgba(191, 219, 254, var(--tw-text-opacity)) solid;
+          }
           &.active {
-            @apply text-blue-100 underline;
+            @apply text-purple-100;
+            &:after {
+              @apply w-full;
+            }
           }
         }
 
         & .btnmobile {
           @apply text-2xl text-blue-400 bg-blue-50 rounded-full w-32 text-center h-10 justify-center flex mb-8;
-          @apply smplus:text-3xl smplus:w-44 smplus:h-14 transition-all duration-300;
+          @apply smplus:text-3xl smplus:w-44 smplus:h-14 transition-all duration-700;
 
           &.active {
             @apply bg-blue-400 text-blue-50;
@@ -335,7 +357,7 @@ export default {
   }
 }
 
-.inputOpened{
-margin-left: -1rem !important;
+.inputOpened {
+  margin-left: -1rem !important;
 }
 </style>
