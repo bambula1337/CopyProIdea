@@ -38,15 +38,11 @@
           ><button>Sign Up</button></router-link
         >
       </div>
-      <div
-        class="mobilemenu"
-        @click="toggle"
-        :class="{ 'lgplus:hidden': !menuIsOpened }"
-      >
+      <div class="mobilemenu" :class="{ 'lgplus:hidden': !menuIsOpened }">
         <div class="iconwrapper">
           <span class="icon"></span>
         </div>
-        <input type="checkbox" />
+        <input type="checkbox" @click="toggle" />
       </div>
       <div class="menu">
         <div class="linksmobile">
@@ -212,7 +208,7 @@ export default {
       @apply smlger:ml-24 z-30 absolute top-0.5;
       right: 10%;
       & input {
-        @apply relative opacity-0 w-8 h-7 mt-4 -ml-8;
+        @apply relative opacity-0 w-10 h-8 mt-4 -ml-9;
 
         &:checked {
           @apply mt-4;
