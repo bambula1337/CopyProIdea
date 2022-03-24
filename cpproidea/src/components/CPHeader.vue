@@ -1,24 +1,30 @@
 <template>
-  <header class="header">
-    <p class="logo">Skybox</p>
+  <header class="header" @click="scrollerFunc">
+    <router-link
+          to="/"
+          class="nav-link-default"
+          :active-class="'active'"
+          exact
+          ><p class="logo link">Skybox</p></router-link
+        >
     <div class="navigation">
       <div class="links">
         <router-link
           to="/"
-          class="nav-link-default"
+          class="nav-link-default link"
           :active-class="'active'"
           exact
           >Home</router-link
         >
         <router-link
           to="/pricing"
-          class="nav-link-default"
+          class="nav-link-default link"
           :active-class="'active'"
           >Pricing</router-link
         >
         <router-link
           to="/contact"
-          class="nav-link-default"
+          class="nav-link-default link"
           :active-class="'active'"
           >Contact</router-link
         >
@@ -26,7 +32,7 @@
       <div class="login">
         <router-link
           to="/login"
-          class="login-link"
+          class="login-link link"
           :active-class="'active'"
           exact
           >Login</router-link
@@ -35,7 +41,7 @@
           to="/register"
           class="sign-up-link"
           :active-class="'active'"
-          ><button>Sign Up</button></router-link
+          ><button class="link">Sign Up</button></router-link
         >
       </div>
       <div class="mobilemenu" :class="{ 'lgplus:hidden': !menuIsOpened }">
@@ -48,20 +54,20 @@
         <div class="linksmobile">
           <router-link
             to="/"
-            class="linkmobile"
+            class="linkmobile link"
             :active-class="'mobileactive'"
             exact
             >Home</router-link
           >
           <router-link
             to="/pricing"
-            class="linkmobile"
+            class="linkmobile link"
             :active-class="'mobileactive'"
             >Pricing</router-link
           >
           <router-link
             to="/contact"
-            class="linkmobile"
+            class="linkmobile link"
             :active-class="'mobileactive'"
             >Contact</router-link
           >
@@ -69,13 +75,13 @@
         <div class="btnsmobile">
           <router-link
             to="/login"
-            class="loginmobile"
+            class="loginmobile link"
             :active-class="'active'"
             exact
             >Login</router-link
           >
           <router-link to="/register" class="btnmobile" :active-class="'active'"
-            ><button>Sign Up</button></router-link
+            ><button class="link">Sign Up</button></router-link
           >
         </div>
       </div>
@@ -110,6 +116,11 @@ export default {
         this.input.classList.remove("inputOpened");
       }
     },
+    scrollerFunc: function(event){
+      if(event.target.matches(".link")){
+        window.scrollTo(0, 0)
+      }
+    }
   },
   data() {
     return {
