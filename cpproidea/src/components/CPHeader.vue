@@ -249,11 +249,14 @@ export default {
       }
     }
     & .menu {
-      @apply bg-gradient-to-r from-purple-400 to-purple-400 fixed -top-0 z-20 flex-col flex justify-between overflow-x-auto rounded-l-3xl transition-all duration-700 w-44;
+      @apply fixed -top-0 z-20 flex-col flex justify-between overflow-x-auto rounded-l-3xl transition-all duration-700 w-44;
       @apply smplus:w-52;
       @apply lgplus:hidden;
       height: 100vh;
       right: -55%;
+      background: linear-gradient(285deg,  #495ea1, #bb32ff, #3352a7);
+      background-size: 240% 240%;
+      animation: gradient-animation 5s ease infinite;
 
       & .linksmobile {
         @apply flex w-full flex-col items-center mt-56;
@@ -355,5 +358,16 @@ export default {
 
 .inputOpened {
   margin-left: -1rem !important;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>
