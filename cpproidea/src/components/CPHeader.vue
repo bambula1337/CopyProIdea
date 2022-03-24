@@ -268,10 +268,10 @@ export default {
             @apply w-0 transition-all;
             transition-duration: 800ms;
             content: "";
-            border-bottom: 3px rgba(139, 92, 246, var(--tw-text-opacity)) solid;
+            border-bottom: 3px rgba(167, 139, 250, var(--tw-text-opacity)) solid;
           }
           &.mobileactive {
-            @apply text-purple-500;
+            @apply text-purple-400;
 
             &:after {
               @apply w-full;
@@ -289,10 +289,10 @@ export default {
             @apply w-0 transition-all;
             transition-duration: 800ms;
             content: "";
-            border-bottom: 3px rgba(139, 92, 246, var(--tw-text-opacity)) solid;
+            border-bottom: 3px rgba(167, 139, 250, var(--tw-text-opacity)) solid;
           }
           &.active {
-            @apply text-purple-500;
+            @apply text-purple-400;
             &:after {
               @apply w-full;
             }
