@@ -45,12 +45,12 @@
         >
       </div>
       <div class="mobilemenu" :class="{ 'lgplus:hidden': !menuIsOpened }">
-        <div class="iconwrapper">
-          <span class="icon"></span>
+        <div class="iconwrapper" :class="{'isOpenedForicon': isOpenedMenu}">
+          <span :class="[isOpenedMenu ? 'iconOpened' : 'icon']"></span>
         </div>
-        <input type="checkbox" @click="toggle" />
+        <input type="checkbox"  v-model="isOpenedMenu" :class="{'isOpened': isOpenedMenu, 'inputOpened': isOpenedMenu}"/>
       </div>
-      <div class="menu">
+      <div class="menu" :class="{'menuIsOpenedStyle': isOpenedMenu}">
         <div class="linksmobile">
           <router-link
             to="/"
@@ -93,29 +93,6 @@
 export default {
   name: "CPHeader",
   methods: {
-    toggle: function (event) {
-      this.menuIsOpened = !this.menuIsOpened;
-      this.menu = document.querySelector(".menu");
-      this.iconEl = document.querySelector(".iconwrapper");
-      this.iconElchild = this.iconEl.querySelector("span");
-      this.mobilemenu = document.querySelector(".mobilemenu");
-      this.input = this.mobilemenu.querySelector("input");
-      if (this.menuIsOpened) {
-        event.target.classList.add("isOpened");
-        this.iconEl.classList.add("isOpenedForicon");
-        this.iconElchild.classList.remove("icon");
-        this.iconElchild.classList.add("iconOpened");
-        this.menu.style.right = "0%";
-        this.input.classList.add("inputOpened");
-      } else {
-        this.menu.style.right = "-55%";
-        event.target.classList.remove("isOpened");
-        this.iconEl.classList.remove("isOpenedForicon");
-        this.iconElchild.classList.remove("iconOpened");
-        this.iconElchild.classList.add("icon");
-        this.input.classList.remove("inputOpened");
-      }
-    },
     scrollerFunc: function(event){
       if(event.target.matches(".link")){
         window.scrollTo(0, 0)
@@ -124,7 +101,7 @@ export default {
   },
   data() {
     return {
-      menuIsOpened: false,
+      isOpenedMenu: false,
     };
   },
 };
@@ -380,5 +357,9 @@ export default {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.menuIsOpenedStyle{
+  right: 0% !important;
 }
 </style>
